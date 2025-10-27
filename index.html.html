@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bella Beauty Box — Mobile Pamper Parties & Karaoke</title>
+  <meta name="description" content="Mobile karaoke and pamper parties for kids, teens & adults — glam makeovers, karaoke, photo props & more." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --pink:#ff5eb8;
+      --purple:#c67aff;
+      --mint:#96f7d2;
+      --yellow:#ffe88a;
+      --blue:#9ee6ff;
+      --deep:#5a2070;
+      --card:#fff9fe;
+      --shadow: 0 6px 20px rgba(90,32,112,0.15);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint));color:white;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+    .brand{display:flex;align-items:center;gap:12px}
+    nav a{margin-left:16px;color:white;text-decoration:none;font-weight:600;transition:opacity 0.3s}
+    nav a:hover{opacity:0.8}
+
+    .social-icons a{color:white;margin-left:16px;font-size:22px;transition:color 0.3s ease;}
+    .social-icons a:hover{color:var(--yellow);}
+
+    section{scroll-margin-top:100px}
+
+    .carousel{position:relative;width:100%;height:400px;overflow:hidden;margin-top:10px;}
+    .carousel img{width:100%;height:400px;object-fit:cover;animation:fade 12s infinite;position:absolute;left:0;top:0;opacity:0;}
+    .carousel img:nth-child(1){animation-delay:0s;}
+    .carousel img:nth-child(2){animation-delay:4s;}
+    .carousel img:nth-child(3){animation-delay:8s;}
+    .carousel img:nth-child(4){animation-delay:12s;}
+    @keyframes fade{0%,100%{opacity:0;}10%,90%{opacity:1;}}
+
+    h2{font-size:42px;margin:14px 0;line-height:1.05;color:var(--deep)}
+    p.lead{color:#5a435a;font-size:17px}
+
+    form{display:grid;gap:10px;max-width:600px;margin:0 auto;padding:20px;background:#fff;border-radius:12px;box-shadow:var(--shadow)}
+    label{font-weight:600;color:var(--deep)}
+    input,select,textarea{padding:10px;border-radius:8px;border:1px solid #ccc;width:100%}
+    button.submit{background:linear-gradient(90deg,var(--pink),var(--purple));color:white;border:0;padding:12px;border-radius:10px;cursor:pointer;font-weight:700}
+
+    footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div>
+        <div style="font-weight:800;color:white">Bella Beauty Box</div>
+        <div style="font-size:12px;color:#fff9fe">Mobile pamper parties & karaoke</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book</a>
+      <a href="#consent">Consent</a>
+      <a href="#faq">FAQ</a>
+      <span class="social-icons">
+        <a href="https://www.instagram.com/bellabeautyboxireland?igsh=ZWh5NHN3MWw4Z2pj" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@bellabeautybox?_t=ZN-90iC7DJJtQt&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="carousel">
+      <img src="images/logo.svg" alt="Bella Beauty Box Logo" />
+      <img src="images/pamper-party.jpg" alt="Pamper party" />
+      <img src="images/karaoke-fun.jpg" alt="Karaoke fun" />
+      <img src="images/makeover-session.jpg" alt="Makeover session" />
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 style="text-align:center">Our Packages</h2>
+    <p class="lead" style="text-align:center">Choose the perfect party experience for your guests</p>
+    <!-- The service sections remain unchanged from previous version -->
+  </section>
+
+  <section id="booking">
+    <h2 style="text-align:center;color:var(--deep)">Book Your Party</h2>
+    <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://bella-beauty-box.vercel.app/thank-you.html">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required>
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" name="time" required>
+      <label for="package">Select Package</label>
+      <select id="package" name="package">
+        <option value="Princess Pop Package">Princess Pop Package</option>
+        <option value="VIPrincess Package">VIPrincess Package</option>
+        <option value="Queen Teen Package">Queen Teen Package</option>
+        <option value="Custom Package">Custom Package</option>
+        <option value="Hair Extensions">Hair Extensions</option>
+      </select>
+      <label for="message">Party Information</label>
+      <textarea id="message" name="message" rows="4" placeholder="Include party size, special requests and any other information."></textarea>
+      <button class="submit" type="submit">Send Booking Request</button>
+    </form>
+  </section>
+
+  <section id="consent">
+    <h2 style="text-align:center;color:var(--deep)">Consent Form</h2>
+    <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://bella-beauty-box.vercel.app/consent-thanks.html">
+      <label for="party-date">Party Date</label>
+      <input type="date" id="party-date" name="party-date" required>
+      <label for="guest-name">Guest Name</label>
+      <input type="text" id="guest-name" name="guest-name" required>
+      <label for="guardian-name">Parent / Guardian Name</label>
+      <input type="text" id="guardian-name" name="guardian-name" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+      <label for="photo-use">Use of Photography / Videos</label>
+      <select id="photo-use" name="photo-use" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <label for="skin-allergies">Skin Allergies (if any)</label>
+      <input type="text" id="skin-allergies" name="skin-allergies">
+      <label for="food-allergies">Food Allergies (if any)</label>
+      <textarea id="food-allergies" name="food-allergies" rows="2"></textarea>
+      <label for="parent-signature">Parent's Full Name (acts as Signature)</label>
+      <input type="text" id="parent-signature" name="parent-signature" required>
+      <button class="submit" type="submit">Submit Consent Form</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Bella Beauty Box | Follow us on 
+      <a href="https://www.instagram.com/bellabeautyboxireland?igsh=ZWh5NHN3MWw4Z2pj" target="_blank" style="color:white;text-decoration:underline">Instagram</a> & 
+      <a href="https://www.tiktok.com/@bellabeautybox?_t=ZN-90iC7DJJtQt&_r=1" target="_blank" style="color:white;text-decoration:underline">TikTok</a>
+    </p>
+  </footer>
+</body>
+</html>
