@@ -33,17 +33,35 @@
     .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:100%;gap:10px;padding:10px;background:white;}
     .carousel img{flex:0 0 auto;width:80%;max-width:600px;height:350px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow);scroll-snap-align:center;}
 
+      @media (max-width:640px){
+      .carousel img{width:92%;height:260px}
+      .package-card{padding:16px;border-radius:20px}
     h2{font-size:42px;margin:14px 0;line-height:1.05;color:var(--deep)}
     p.lead{color:#5a435a;font-size:17px}
 
-    .package-card{background:white;border-radius:30px;padding:20px;margin:20px auto;max-width:700px;box-shadow:var(--shadow);}
-    .package-card:nth-child(even){border:6px solid transparent;background:white;background-clip:padding-box;border-radius:linear-gradient(45deg,var(--pink),var(--purple),var(--mint),var(--yellow),var(--blue)) 1;}
-    .package-card:nth-child(odd){border:6px solid transparent;background:white;background-clip:padding-box;border-radius:linear-gradient(45deg,var(--blue),var(--mint),var(--purple),var(--pink),var(--yellow)) 1;}
-    .package-card.gold{border:6px solid gold;box-shadow:0 0 20px rgba(255,215,0,0.5);background:white;background-clip:padding-box;border-radius:30px;}
-    form{display:grid;gap:10px;max-width:600px;margin:0 auto;padding:20px;background:#fff;border-radius:12px;box-shadow:var(--shadow)}
-    label{font-weight:600;color:var(--deep)}
-    input,select,textarea{padding:10px;border-radius:28px;border:1px solid #ccc;width:100%}
-    button.submit{background:linear-gradient(90deg,var(--pink),var(--purple));color:white;border:0;padding:12px;border-radius:10px;cursor:pointer;font-weight:700}
+    .package-card{
+      position:relative;
+      border-radius:28px;                 
+      padding:18px;
+      margin:20px auto;
+      max-width:700px;
+      background-image: linear-gradient(white,white), linear-gradient(90deg, var(--pink), var(--purple), var(--mint), var(--yellow), var(--blue));
+      background-origin: padding-box, border-box;
+      background-clip: padding-box, border-box;
+      border:6px solid transparent;     
+      box-shadow:var(--shadow);
+    }
+
+    .package-card.alt{
+      background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow));
+    }
+
+    .package-card.gold{
+      background-image: linear-gradient(white,white), linear-gradient(90deg, rgba(255,215,0,0.95), rgba(255,235,160,0.9));
+      box-shadow: 0 8px 30px rgba(255,215,0,0.12);
+    }
+    .package-card h3{margin-top:0;color:var(--deep)}
+    .package-card p{color:#5b3d5b}
 
     <!-- FAQ: pill-bubble layout stacked -->
     <style>
