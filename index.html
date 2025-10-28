@@ -15,11 +15,11 @@
       --blue:#9ee6ff;
       --deep:#5a2070;
       --card:#fff9fe;
-      --shadow: 0 6px 20px rgba(90,32,112,0.15);
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      --shadow:0 6px 20px rgba(90,32,112,0.15);
+      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden}
+    body{margin:0;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden;scroll-behavior:smooth}
     header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint));color:white;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
     .brand{display:flex;align-items:center;gap:12px}
     nav a{margin-left:16px;color:white;text-decoration:none;font-weight:600;transition:opacity 0.3s}
@@ -41,6 +41,10 @@
     h2{font-size:42px;margin:14px 0;line-height:1.05;color:var(--deep)}
     p.lead{color:#5a435a;font-size:17px}
 
+    .package-card{background:white;border-radius:20px;padding:20px;margin:20px auto;max-width:700px;box-shadow:var(--shadow);}
+    .package-card:nth-child(even){border:6px solid transparent;background:white;background-clip:padding-box;border-image:linear-gradient(45deg,var(--pink),var(--purple),var(--mint),var(--yellow),var(--blue)) 1;}
+    .package-card:nth-child(odd){border:6px solid transparent;background:white;background-clip:padding-box;border-image:linear-gradient(45deg,var(--blue),var(--mint),var(--purple),var(--pink),var(--yellow)) 1;}
+    .package-card.gold{border:6px solid gold;box-shadow:0 0 20px rgba(255,215,0,0.5);background:white;background-clip:padding-box;}
     form{display:grid;gap:10px;max-width:600px;margin:0 auto;padding:20px;background:#fff;border-radius:12px;box-shadow:var(--shadow)}
     label{font-weight:600;color:var(--deep)}
     input,select,textarea{padding:10px;border-radius:8px;border:1px solid #ccc;width:100%}
@@ -110,7 +114,7 @@
       </ul>
     </div>
 
-    <div class="package">
+    <div class="package-card">
       <h3>VIPrincess Package — €35 per guest</h3>
        <p>Bella Beauty Box introduces the ultimate ‘VIPrincess Package’. This is where the Princess scene meets the ultimate party scene, designed for those who crave a unique experience with all that sparkles and shines.</p>
       <h4>Package includes:</h4>
@@ -140,7 +144,7 @@
       </ul>
     </div>
 
-    <div class="package">
+    <div class="package-card">
       <h3>Queen Teen Package — €38 per guest</h3>
         <p>Bella Beauty Box introduces a Beauty Queens dream party the ‘Queen Teen Package’. Spoil yourself to being treated like a Queen then take to the karaoke floor and unleash your inner diva!</p>
       <h4>Package includes:</h4>
@@ -171,7 +175,7 @@
       </ul>
     </div>
 
-    <div class="package">
+    <div class="package-card">
       <h3>Custom Package — Price on Request</h3>
        <p>Let’s create your own custom pamper or karaoke party! Choose your services, themes, and extras for an unforgettable event tailored just for you.</p>
        <ul>
@@ -182,7 +186,7 @@
        </ul>
     </div>
 
-    <div class="package">
+    <div class="package-card gold">
       <h3>Hair Extensions</h3>
        <p>Let us come to you and add beautiful length and thickness. Be the Queen you deserve to be with 20” Double-drawn high quality human hair I-tip extensions.</p>
        <ul>
@@ -191,8 +195,8 @@
           <li>Full Head 120g.........€420</li>
        </ul>
     </div>
-
   </section>
+        
   <section id="booking">
     <h2 style="text-align:center;color:var(--deep)">Book Your Party</h2>
     <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
@@ -271,23 +275,24 @@
 
       <button class="submit" type="submit">Submit Consent Form</button>
     </form>
-    
   </section>
+        
  <section id="faq">
     <h2 style="text-align:center;color:var(--deep)">Frequently Asked Questions</h2>
     <div style="max-width:800px;margin:0 auto;padding:20px;">
-      <div class="faq-item"><div class="faq-question">Q. Do I need to pay a deposit?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. Yes a deposit of 25% is required to secure all bookings.</div></div>
-      <div class="faq-item"><div class="faq-question">Q. What is your cancellation policy?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. The deposit although is non-refundable can be used for another party in the future.</div></div>
-      <div class="faq-item"><div class="faq-question">Q. What ages are the parties suitable for?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. Our parties are perfect for children aged 5 and up, teens, and adults who love some glam fun!</div></div>
-      <div class="faq-item"><div class="faq-question">Q. How many guests can I invite?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. We can cater for small groups of 4–12 guests. We might be able to cater for larger events, contact us to discuss further.</div></div>
-      <div class="faq-item"><div class="faq-question">Q. Do you travel outside Limerick?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. Yes! We cover Limerick, Clare, Tipperary, and surrounding areas. A small travel fee may apply for longer distances.</div></div>
-      <div class="faq-item"><div class="faq-question">Q. Are the products safe for children?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. All products used are gentle and child-friendly. Please list any allergies in the consent form.</div></div>
-      <div class="faq-item"><div class="faq-question">Q. How far in advance should I book?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. We recommend booking 3–4 weeks in advance to secure your date.</div></div>
-      <div class="faq-item"><div class="faq-question">Q. Is there anything I need to provide?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. Yes, there will need to be an open space to park the venue on a flat surface and access to an electrical socket.</div></div>
-      <div class="faq-item"><div class="faq-question">Q.  you take videos and photos?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. Yes, with consent. Videos and photos will be taken and sent on to the person who booked the party.</div></div>
-      <div class="faq-item"><div class="faq-question">Q. What happens during bad weather?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">A. Bella Beauty Box is fully enclosed and can operate in most weather conditions. However, for severe weather, we will need to reschedule your party to a safer date.</div></div>
+      <div class="faq-item"><div class="faq-question">Do I need to pay a deposit?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes a deposit of 25% is required to secure all bookings.</div></div>
+      <div class="faq-item"><div class="faq-question">What is your cancellation policy?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">The deposit although is non-refundable can be used for another party in the future.</div></div>
+      <div class="faq-item"><div class="faq-question">What ages are the parties suitable for?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Our parties are perfect for children aged 5 and up, teens, and adults who love some glam fun!</div></div>
+      <div class="faq-item"><div class="faq-question">How many guests can I invite?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">We can cater for small groups of 4–12 guests. We might be able to cater for larger events, contact us to discuss further.</div></div>
+      <div class="faq-item"><div class="faq-question">Do you travel outside Limerick?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes! We cover Limerick, Clare, Tipperary, and surrounding areas. A small travel fee may apply for longer distances.</div></div>
+      <div class="faq-item"><div class="faq-question">Are the products safe for children?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">All products used are gentle and child-friendly. Please list any allergies in the consent form.</div></div>
+      <div class="faq-item"><div class="faq-question">How far in advance should I book?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">We recommend booking 3–4 weeks in advance to secure your date.</div></div>
+      <div class="faq-item"><div class="faq-question">Is there anything I need to provide?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, there will need to be an open space to park the venue on a flat surface and access to an electrical socket.</div></div>
+      <div class="faq-item"><div class="faq-question">Will you take videos and photos?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, with consent. Videos and photos will be taken and sent on to the person who booked the party.</div></div>
+      <div class="faq-item"><div class="faq-question">What happens during bad weather?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Bella Beauty Box is fully enclosed and can operate in most weather conditions. However, for severe weather, we will need to reschedule your party to a safer date.</div></div>
     </div>
-  </section>        
+  </section>   
+        
 <footer>
     <p>© 2025 Bella Beauty Box | Follow us on 
       <a href="https://www.instagram.com/bellabeautyboxireland?igsh=ZWh5NHN3MWw4Z2pj" target="_blank" style="color:white;text-decoration:underline">Instagram</a> & 
