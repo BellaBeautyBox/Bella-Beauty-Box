@@ -50,6 +50,25 @@
     input,select,textarea{padding:10px;border-radius:8px;border:1px solid #ccc;width:100%}
     button.submit{background:linear-gradient(90deg,var(--pink),var(--purple));color:white;border:0;padding:12px;border-radius:10px;cursor:pointer;font-weight:700}
 
+    <!-- FAQ: pill-bubble layout stacked -->
+    <style>
+    .faq-wrap {max-width: 800px;margin: 0 auto;padding: 28px 20px;}
+     .faq-header {text-align: center;color: var(--deep);margin-bottom: 18px;font-size: 28px;font-weight: 800;
+  }
+
+   .faq-grid {display: flex;flex-direction: column;gap: 16px;align-items: center;padding-top: 8px;
+  }
+    .faq-pill { display: block; text-align: center; padding: 14px 22px; border-radius: 999px;background: white;border: 2px solid transparent;background-image:linear-gradient(white, white), linear-gradient(90deg, #ff5eb8 0%, #c67aff 25%, #96f7d2 50%, #ffe88a 75%, #9ee6ff 100%);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 6px 18px rgba(90,32,112,0.08); width: 100%; max-width: 600px; font-weight:600; color: #3b2a3b;line-height:1.3;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  .faq-pill:hover { transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(90,32,112,0.12);
+  }
+    
     footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
   </style>
 </head>
@@ -278,20 +297,32 @@
   </section>
         
  <section id="faq">
-    <h2 style="text-align:center;color:var(--deep)">Frequently Asked Questions</h2>
-    <div style="max-width:800px;margin:0 auto;padding:20px;">
-      <div class="faq-item"><div class="faq-question">Do I need to pay a deposit?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes a deposit of 25% is required to secure all bookings.</div></div>
-      <div class="faq-item"><div class="faq-question">What is your cancellation policy?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">The deposit although is non-refundable can be used for another party in the future.</div></div>
-      <div class="faq-item"><div class="faq-question">What ages are the parties suitable for?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Our parties are perfect for children aged 5 and up, teens, and adults who love some glam fun!</div></div>
-      <div class="faq-item"><div class="faq-question">How many guests can I invite?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">We can cater for small groups of 4–12 guests. We might be able to cater for larger events, contact us to discuss further.</div></div>
-      <div class="faq-item"><div class="faq-question">Do you travel outside Limerick?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes! We cover Limerick, Clare, Tipperary, and surrounding areas. A small travel fee may apply for longer distances.</div></div>
-      <div class="faq-item"><div class="faq-question">Are the products safe for children?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">All products used are gentle and child-friendly. Please list any allergies in the consent form.</div></div>
-      <div class="faq-item"><div class="faq-question">How far in advance should I book?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">We recommend booking 3–4 weeks in advance to secure your date.</div></div>
-      <div class="faq-item"><div class="faq-question">Is there anything I need to provide?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, there will need to be an open space to park the venue on a flat surface and access to an electrical socket.</div></div>
-      <div class="faq-item"><div class="faq-question">Will you take videos and photos?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, with consent. Videos and photos will be taken and sent on to the person who booked the party.</div></div>
-      <div class="faq-item"><div class="faq-question">What happens during bad weather?<i class="fas fa-chevron-down"></i></div><div class="faq-answer">Bella Beauty Box is fully enclosed and can operate in most weather conditions. However, for severe weather, we will need to reschedule your party to a safer date.</div></div>
+  <div class="faq-wrap">
+    <h2 class="faq-header">Frequently Asked Questions</h2>
+
+    <div class="faq-grid">
+      <div class="faq-pill"><div class="faq-q">Do I need to pay a deposit?<br><small style="font-weight:400;">Yes — 25% is required to secure bookings.</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">What is your cancellation policy?<br><small style="font-weight:400;">Deposit is non-refundable but can be used for a future party.</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">What ages are the parties suitable for?<br><small style="font-weight:400;">Ages 5+, teens, and adults.</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">How many guests can I invite?<br><small style="font-weight:400;">We cater for 4–12 guests (contact us for larger groups).</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">Do you travel outside Limerick?<br><small style="font-weight:400;">Yes — Limerick, Clare, Tipperary & surrounds (travel fee may apply).</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">Are the products safe for children?<br><small style="font-weight:400;">Yes — child-friendly products; list allergies on the consent form.</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">How far in advance should I book?<br><small style="font-weight:400;">We recommend 3–4 weeks in advance.</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">Is there anything I need to provide?<br><small style="font-weight:400;">An open, flat space to park and access to an electrical socket.</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">Will you take videos and photos?<br><small style="font-weight:400;">Yes — with consent; they’ll be sent to the person who booked.</small></div></div>
+
+      <div class="faq-pill"><div class="faq-q">What happens during bad weather?<br><small style="font-weight:400;">We’re enclosed and can operate in most weather; severe weather may require reschedule.</small></div></div>
     </div>
-  </section>   
+  </div>
+</section>
         
 <footer>
     <p>© 2025 Bella Beauty Box | Follow us on 
