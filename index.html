@@ -29,19 +29,16 @@
     .social-icons a:hover{color:var(--yellow);}
 
     section{scroll-margin-top:100px}
-
-    .form-card{max-width:650px;margin:40px auto;padding:30px;background:var(--card);border-radius:25px;box-shadow:var(--shadow);border:5px solid transparent;background-image:linear-gradient(white,white),linear-gradient(135deg,var(--pink),var(--purple),var(--mint),var(--yellow),var(--blue));background-origin:border-box;background-clip:padding-box,border-box;}
    
     .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:100%;gap:10px;padding:10px;background:white;}
     .carousel img{flex:0 0 auto;width:80%;max-width:600px;height:350px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow);scroll-snap-align:center;}
 
-      @media (max-width:640px){
-      .carousel img{width:92%;height:260px}
-      .package-card{padding:16px;border-radius:20px}
+    @media (max-width: 640px) {.packages-grid {grid-template-columns: 1fr;gap: 1.5rem;}
+    .form-card {padding: 1.5rem; } }
     h2{font-size:42px;margin:14px 0;line-height:1.05;color:var(--deep)}
     p.lead{color:#5a435a;font-size:17px}
 
-    .package-card{position: relative; border-radius:28px; padding:18px; margin:20px auto; max-width:700px; background-image: linear-gradient(white,white), linear-gradient(90deg, var(--pink), var(--purple), var(--mint), var(--yellow), var(--blue)); background-origin: padding-box, border-box; background-clip: padding-box, border-box; border:6px solid transparent; box-shadow:var(--shadow); }
+    .package-card {border-radius: 24px; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 4px solid transparent;  background-image: linear-gradient(white, white),  linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
     .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow));}
     .package-card.gold{background-image: linear-gradient(white,white), linear-gradient(90deg, rgba(255,215,0,0.95), rgba(255,235,160,0.9));box-shadow: 0 8px 30px rgba(255,215,0,0.12);}
     .package-card h3{margin-top:0;color:var(--deep)}
@@ -310,35 +307,38 @@
     </div>
    </section>
         
-  <section id="contact" class="contact-section">
-    <h2 style="color:var(--deep);text-align:center;">Contact Us</h2>
-     <div class="form-card">
-      <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://yourdomain.com/contact-thanks.html">
-        <label for="contact-name">Name</label>
-        <input type="text" id="contact-name" name="contact-name" required>
-
-        <label for="contact-email">Email</label>
-        <input type="email" id="contact-email" name="contact-email" required>
-
-        <label for="contact-query">Your Query</label>
-        <textarea id="contact-query" name="contact-query" rows="4" required></textarea>
-
-        <button class="submit" type="submit">Send Message</button>
-      </form>
-    </div>
+  <section id="contact" class="form-section">
+  <div class="form-card">
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+      <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+       <label for="message">Query</label>
+       <textarea id="message" name="message" rows="4" required></textarea>
+       <button type="submit" class="submit-btn">Send Message</button>
+     </form>
+   </div>
+ </section>
     
-    <div class="contact-info">
-      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:bellabeautyboxireland@gmail.com">bellabeautyboxireland@gmail.com</a></p>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:0876218865">087 621 8865</a></p>
-    </div>
+ <div class="contact-info">
+   <p><strong>Email:</strong> <a href="mailto:bellabeautyboxireland@gmail.com">bellabeautyboxireland@gmail.com</a></p>
+   <p><strong>Phone:</strong> <a href="tel:+353876218865">087 621 8865</a></p>
+ </div>
   </section>
     
-<footer>
-    <p>© 2025 Bella Beauty Box | Follow us on 
-      <a href="https://www.instagram.com/bellabeautyboxireland?igsh=ZWh5NHN3MWw4Z2pj" target="_blank" style="color:white;text-decoration:underline">Instagram</a> & 
-      <a href="https://www.tiktok.com/@bellabeautybox?_t=ZN-90iC7DJJtQt&_r=1" target="_blank" style="color:white;text-decoration:underline">TikTok</a>
-    </p>
-  </footer>
+<footer class="footer">
+   <div class="footer-content">
+     <p>© 2025 Bella Beauty Box. All rights reserved.</p>
+     <div class="social-links">
+       <a href="https://www.instagram.com/bellabeautyboxireland" aria-label="Instagram">
+         <i class="fab fa-instagram"></i>
+       </a>
+       <a href="https://www.tiktok.com/@bellabeautyboxireland" aria-label="TikTok">
+         <i class="fab fa-tiktok"></i>
+       </a>
+     </div>
+   </div>
+ </footer>
 </body>
 </html>
