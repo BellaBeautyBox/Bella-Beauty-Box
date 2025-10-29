@@ -45,9 +45,9 @@
     .package-card h3{margin-top:0;color:var(--deep)}
     .package-card p{color:#5b3d5b}
         
-    .contact-section{padding:40px 20px;text-align:center;}
-    .contact-info{margin-top:10px;}
-    .contact-info a{color:var(--deep);font-weight:600;text-decoration:none;}
+    .contact-info{margin-top:25px;text-align:center;font-size:18px;color:var(--deep);}
+    .contact-info a{color:var(--purple);font-weight:600;text-decoration:none;transition:color 0.3s;}
+    .contact-info a:hover{color:var(--pink);}
     
     footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
   </style>
@@ -221,8 +221,7 @@
         <option value="VIPrincess Package">VIPrincess Package</option>
         <option value="Queen Teen Package">Queen Teen Package</option>
         <option value="Custom Package">Custom Package</option>
-        <option value="Hair Extensions, Include package in notes below">Hair Extensions</option>
-
+        <option value="Hair Extensions">Hair Extensions</option>
       </select>
 
       <label for="message">Party Information</label>
@@ -230,11 +229,9 @@
 
       <button class="submit" type="submit">Send Booking Request</button>
     </form>
-         </ul>
-    </div>
-      
-   </section>
-  <section id="consent">
+  </section>
+  
+   <section id="consent">
     <h2 style="text-align:center;color:var(--deep)">Consent Form</h2>
     <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
       <input type="hidden" name="_next" value="https://yourdomain.com/consent-thanks.html">
@@ -254,8 +251,8 @@
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" required>
 
-      <label for="Child First Name"> Child First Name </label>
-      <input type="tel" id="child" name="child" required>
+      <label for="child-name">Child First Name</label>
+      <input type="text" id="child-name" name="child-name" required>
 
       <label for="photo-use">Use of Photography / Videos</label>
       <select id="photo-use" name="photo-use" required>
@@ -267,19 +264,33 @@
       <input type="text" id="skin-allergies" name="skin-allergies">
 
       <label for="food-allergies">Food Allergies (if any)</label>
-      <textarea id="food-allergies" name="food-allergies" rows="2" placeholder="Please Note – Some severe allergies might not be accommodated. Please call us with any concerns"></textarea>
+      <textarea id="food-allergies" name="food-allergies" rows="2"></textarea>
 
       <label for="comments">Any other comments</label>
       <textarea id="comments" name="comments" rows="3"></textarea>
 
-      <label for="parent-signature">I am happy for my Child to participate in all activities to be taken place at the party such as manicures, pedicures, face masks, hair styling, make-up, face glitter applications unless mentioned in the notes. Parent's Full Name (acts as Signature)</label>
+      <label for="parent-signature">Parent's Full Name (acts as Signature)</label>
       <input type="text" id="parent-signature" name="parent-signature" required>
 
       <button class="submit" type="submit">Submit Consent Form</button>
     </form>
-        </ul>
-    </div>
-   </section>
+  </section>
+
+   <label for="skin-allergies">Skin Allergies (if any)</label>
+      <input type="text" id="skin-allergies" name="skin-allergies">
+
+      <label for="food-allergies">Food Allergies (if any)</label>
+      <textarea id="food-allergies" name="food-allergies" rows="2"></textarea>
+
+      <label for="comments">Any other comments</label>
+      <textarea id="comments" name="comments" rows="3"></textarea>
+
+      <label for="parent-signature">Parent's Full Name (acts as Signature)</label>
+      <input type="text" id="parent-signature" name="parent-signature" required>
+
+      <button class="submit" type="submit">Submit Consent Form</button>
+    </form>
+  </section>
         
  <section id="faq">
   <div class="faq-wrap">
@@ -310,25 +321,26 @@
    </section>
         
   <section id="contact" class="contact-section">
-    <h2 style="color:var(--deep)">Contact Us</h2>
+    <h2 style="color:var(--deep);text-align:center;">Contact Us</h2>
     <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://yourdomain.com/contact-thanks.html">
       <label for="contact-name">Name</label>
       <input type="text" id="contact-name" name="contact-name" required>
+
       <label for="contact-email">Email</label>
       <input type="email" id="contact-email" name="contact-email" required>
+
       <label for="contact-query">Your Query</label>
       <textarea id="contact-query" name="contact-query" rows="4" required></textarea>
+
       <button class="submit" type="submit">Send Message</button>
     </form>
+    
     <div class="contact-info">
-      <p>Email: <a href="mailto:bellabeautyboxireland@gmail.com">bellabeautyboxireland@gmail.com</a></p>
-      <p>Phone: <a href="tel:0876218865">0876218865</a></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:bellabeautyboxireland@gmail.com">bellabeautyboxireland@gmail.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:0876218865">087 621 8865</a></p>
     </div>
   </section>
-  
-    <div class="contact-info">
-      <p>Email: <a href="mailto:bellabeautyboxireland@gmail.com">bellabeautyboxireland@gmail.com</a></p>
-      <p>Mobile: <a href="tel:0876218865">0876218865</a></p>
     </div>
   </section>
     
