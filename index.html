@@ -30,7 +30,7 @@
 
     section{scroll-margin-top:100px}
    
-    .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:50%;gap:10px;padding:10px;background:white;}
+    .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:100%;gap:10px;padding:10px;background:white;}
     .carousel img{flex:0 0 auto;width:80%;max-width:600px;height:350px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow);scroll-snap-align:center;}
 
     @media (max-width: 768px) {.packages-grid {grid-template-columns: 1fr;gap: 1.5rem;}
@@ -41,7 +41,7 @@
   background-clip: content-box, border-box;
   padding: 2rem;
 }}
-    .package-card{text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 2px solid transparent;  background-image: linear-gradient(white, white),  linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
+    .package-card{width:60%, text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 2px solid transparent;  background-image: linear-gradient(white, white),  linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
     .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow));}
     .package-card.gold{background-image: linear-gradient(white,white), linear-gradient(90deg, rgba(255,215,0,0.95), rgba(255,235,160,0.9));box-shadow: 0 8px 30px rgba(255,215,0,0.12);}
     .package-card h3{text-align: center; margin-top:25;color:var(--deep)}
