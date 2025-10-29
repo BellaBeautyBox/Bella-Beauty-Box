@@ -48,12 +48,64 @@
     .package-card p{color:#5b3d5b}
 
     .book-btn {display: inline-block; margin: 15px 0; padding: 10px 20px; background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; text-decoration: none; border-radius: 25px; font-weight: bold;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, opacity 0.3s ease;}
+
+.book-btn:hover {transform: scale(1.05);opacity: 0.9;}form {display: flex;flex-direction: column; gap: 1rem; align-items: center; text-align: left;} form label {font-weight: 600; color: var(--deep); width: 100%; text-align: left;}
+form input, form select, form textarea { width: 90%; padding: 10px; border: 2px solid transparent; border-radius: 15px; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff); background-origin: border-box; background-clip: content-box, border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-size: 16px; color: #333;}
+form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: left;
 }
 
-.book-btn:hover {transform: scale(1.05);opacity: 0.9;
+form label {
+  font-weight: 600;
+  color: var(--deep);
+  width: 100%;
+  text-align: left;
 }
-        
+
+form input, form select, form textarea {
+  width: 90%;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: #333;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--pink);
+}
+
+button.submit, button.submit-btn {
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint));
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+button.submit:hover, button.submit-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.package-card form {max-width: 500px; margin: 0 auto;}
+
+ 
     .contact-info{margin-top:25px;text-align:center;font-size:18px;color:var(--deep);}
     .contact-info a{color:var(--purple);font-weight:600;text-decoration:none;transition:color 0.3s;}
     .contact-info a:hover{color:var(--pink);}
@@ -90,6 +142,7 @@
       <p class="lead">Pamper and karaoke parties for kids, teens and grown-ups. Choose a package full of glitter, laughter, and photo-ready props. We bring the glam van to you — perfect for birthdays, hens, and celebrations!</p>
       <div class="cta-row">
     <div class="carousel">
+      </section>
 <img src="Images/party1.svg" alt="logo" />
 <img src="Images/party2.jpg" alt="pamper party" />
 <img src="Images/party3.jpg" alt="karaoke fun" />
@@ -259,7 +312,7 @@
   
    <section id="consent">
     <h2 style="text-align:center;color:var(--deep)">Consent Form</h2>
-    <div class="form-card">
+    <div class="package-card">
       <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
         <input type="hidden" name="_next" value="https://yourdomain.com/consent-thanks.html">
 
@@ -328,12 +381,12 @@
       <div class="faq-pill"><div class="faq-q">Will you take videos and photos?<br><small style="font-weight:400;">Yes — with consent; they’ll be sent to the person who booked.</small></div></div>
 
       <div class="faq-pill"><div class="faq-q">What happens during bad weather?<br><small style="font-weight:400;">We’re enclosed and can operate in most weather; severe weather may require reschedule.</small></div></div>
-       </ul>
     </div>
    </section>
         
   <section id="contact" class="form-section">
-  <div class="form-card">
+  <div class="package-card">
+    <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
     <form id="contactForm">
       <label for="name">Name</label>
       <input id="name" name="name" type="text" required>
