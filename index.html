@@ -35,10 +35,10 @@
 
     @media (max-width: 500px) {.packages-grid {grid-template-columns: 1fr;gap: 1.5rem;}
                                
-    .form-card {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 200px; width: 50%; background: white;border-radius: 10px; border: 1px solid transparent; background-image: linear-gradient(white, white), linear-gradient(50deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 1rem;}}
+    .form-card{display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 200px; width: 50%; background: white;border-radius: 10px; border: 1px solid transparent; background-image: linear-gradient(white, white), linear-gradient(50deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 1rem;}}
  
     .package-card{text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
-    .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow));}
+    .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow));border: 1px solid transparent}
     .package-card.gold{background-image: linear-gradient(white,white), linear-gradient(90deg, rgba(255,215,0,0.95), rgba(255,235,160,0.9));box-shadow: 0 8px 30px rgba(255,215,0,0.12);}
     .package-card h3{text-align: center; margin-top:40;color:var(--deep)}
     .package-card p{color:#5b3d5b}
@@ -269,11 +269,10 @@ form input:focus, form select:focus, form textarea:focus {outline: none; box-sha
       <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
         <input type="hidden" name="_next" value="https://yourdomain.com/consent-thanks.html">
     <h3 style="text-align:center;color:var(--deep)">Consent Form</h3>
-         <div class="form-card">
-           
+          
         <label for="party-date">Party Date</label>
         <input type="date" id="party-date" name="party-date" required>
-         <div class="form-card">
+         
         <label for="party-time">Party Time</label>
         <input type="time" id="party-time" name="party-time" required>
 
