@@ -37,7 +37,7 @@
                                
    .form-card {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 400px; width: 100%; background: white;border-radius: 10px;box-shadow: 0 4px 5px rgba(0,0,0,0.1); border: 0.4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 2rem;}}
  
-    ;}} .package-card{text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
+    .package-card{text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
     .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow))}
     .package-card.gold{background-image: linear-gradient(white,white), linear-gradient(90deg, rgba(255,215,0,0.95), rgba(255,235,160,0.9));box-shadow: 0 8px 30px rgba(255,215,0,0.12);}
     .package-card h3{text-align: center; margin-top:40;color:var(--deep)}
@@ -55,7 +55,16 @@ form input:focus, form select:focus, form textarea:focus {outline: none; box-sha
 
 form {display: flex; flex-direction: column; gap: 1rem; align-items: center; text-align: left;}
 form label {font-weight: 600; color: var(--deep); width: 100%; text-align: left;}
-form input, form select, form textarea {width: 90%; padding: 10px; border: 1px solid transparent; border-radius: 15px; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff); background-origin: border-box; border: 3px solid transparent; background-clip: content-box, box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-size: 16px; color: #333;}
+form input, form select, form textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 16px;
+  color: #333;
+}
 form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);} button.submit, button.submit-btn { background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; border: none; border-radius: 10px; padding: 12px 24px; cursor: pointer; font-weight: bold; box-shadow: var(--shadow); transition: all 0.3s ease;} button.submit:hover, button.submit-btn:hover {transform: scale(1.05); opacity: 0.9;}
  
     .package-card form {max-width: 500px; margin: 0 auto;}
