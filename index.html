@@ -7,101 +7,235 @@
   <title>Bella Beauty Box — Mobile Pamper Parties & Karaoke</title>
   <meta name="description" content="Mobile karaoke and pamper parties for kids, teens & adults — glam makeovers, karaoke, photo props & more." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root{
-      --pink:#ff5eb8;
-      --purple:#c67aff;
-      --mint:#96f7d2;
-      --yellow:#ffe88a;
-      --blue:#9ee6ff;
-      --deep:#5a2070;
-      --card:#fff9fe;
-      --shadow:0 6px 20px rgba(90,32,112,0.15);
-      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
-    }
-    {box-sizing:border-box}
-    body{margin:10;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden;scroll-behavior:smooth}
-    header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint));color:white;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
-    .brand{display:flex;align-items:center;gap:12px}
-    nav a{margin-left:16px;color:white;text-decoration:none;font-weight:100;transition:opacity 0.3s}
-    nav a:hover{opacity:0.8}
+<style>
+:root {
+  --pink:#ff5eb8;
+  --purple:#c67aff;
+  --mint:#96f7d2;
+  --yellow:#ffe88a;
+  --blue:#9ee6ff;
+  --deep:#5a2070;
+  --card:#fff9fe;
+  --shadow:0 6px 20px rgba(90,32,112,0.15);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+}
 
-    .social-icons a{color:white;margin-left:16px;font-size:20px;transition:color 0.3s ease;}
-    .social-icons a:hover{color:var(--yellow);}
+* { box-sizing: border-box; }
 
-    section{scroll-margin-top:100px}
-   
-    .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:100%;gap:10px;padding:10px;background:white;}
-    .carousel img{flex:0 0 auto;width:80%;max-width:600px;height:350px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow);scroll-snap-align:center;}
+body {
+  margin: 0;
+  background: linear-gradient(180deg,#ffe6fa,#fff);
+  color: #3b2a3b;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  animation: fadeIn 0.7s ease-in-out;
+}
 
-    @media (max-width: 500px) {.packages-grid {grid-template-columns: 1fr;gap: 1.5rem;}
-    @media (max-width: 1024px) {
-  /* Tablet */
-  .package-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+/* HEADER & NAV */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  background: linear-gradient(90deg,var(--pink),var(--purple),var(--mint));
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  transition: opacity 0.3s;
+}
+
+nav a:hover { opacity: 0.8; }
+
+.social-icons a {
+  color: white;
+  margin-left: 12px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover { color: var(--yellow); }
+
+/* GENERAL LAYOUT */
+section {
+  scroll-margin-top: 100px;
+  padding: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+}
+
+.carousel img {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  scroll-snap-align: center;
+}
+
+/* PACKAGE CARDS */
+.package-card {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  border: 4px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  max-width: 800px;
+}
+
+.package-card h3 {
+  color: var(--deep);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.package-card p, .package-card ul {
+  color: #5b3d5b;
+  text-align: center;
+}
+
+.book-btn {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background: linear-gradient(90deg,var(--pink),var(--purple),var(--mint));
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.book-btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+/* FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: 600;
+  color: var(--deep);
+  width: 100%;
+  text-align: left;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 1.5px 3px rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: #333;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--pink);
+}
+
+button.submit, .submit-btn {
+  background: linear-gradient(90deg,var(--pink),var(--purple),var(--mint));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+button.submit:hover, .submit-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(90deg,var(--mint),var(--pink),var(--purple));
+  color: white;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+/* RESPONSIVE RULES */
+@media (max-width: 1024px) {
+  header { flex-direction: column; text-align: center; }
+  nav { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .package-card {
+    margin: 15px;
+    padding: 15px;
   }
+
+  nav a { display: block; margin: 6px 0; }
+  h1, h2, h3, p { font-size: 1rem; }
+  .carousel img { width: 95%; height: auto; }
 }
 
-@media (max-width: 768px) {  /* Mobile */nav ul { display: flex; flex-direction: column; align-items: center;
-  }
-
-  .package-cards {grid-template-columns: 1fr;
-  }
-
-  section, .content, .form {padding: 1rem; text-align: center;}h1, h2, h3, p {font-size: 1rem;
-  }
+@media (max-width: 480px) {
+  header div div:first-child { font-size: 30px; }
+  .book-btn { width: 100%; text-align: center; }
+  form input, form select, form textarea { font-size: 15px; }
 }
-                           
-                               
-   .form-card {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 400px; width: 100%; background: white;border-radius: 10px;box-shadow: 0 4px 5px rgba(0,0,0,0.1); border: 0.4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 2rem;}}
- 
-    .package-card{text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
-    .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow))}
-    .package-card.gold{background-image: linear-gradient(white,white), linear-gradient(90deg, rgba(255,215,0,0.95), rgba(255,235,160,0.9));box-shadow: 0 8px 30px rgba(255,215,0,0.12);}
-    .package-card h3{text-align: center; margin-top:40;color:var(--deep)}
-    .package-card p{color:#5b3d5b}
+</style>
 
-    .book-btn {display: inline-block; margin: 15px 0; padding: 10px 20px; background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; text-decoration: none; border-radius: 25px; font-weight: bold;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, opacity 0.3s ease;}
-
-.book-btn:hover {transform: scale(1.05);opacity: 0.9;}form {display: flex;flex-direction: column; gap: 1rem; align-items: center; text-align: left;} form label {font-weight: 600; color: var(--deep); width: 100%; text-align: left;}
-form input, form select, form textarea { width: 100%; padding: 5px; border: 1px solid transparent; border-radius: 15px; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff); background-origin: border-box; background-clip: content-box, border-box; box-shadow: 0 1.5px 3px rgba(0,0,0,0.1); font-size: 16px; color: #333;}
-form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);}
-
-   .faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);}
-
-
-form {display: flex; flex-direction: column; gap: 1rem; align-items: center; text-align: centre;}
-form label {font-weight: 600; color: var(--deep); width: 100%; text-align: centre;}
-form input, form select, form textarea {width: 100%; padding: 10px; border: 1px solid #333; border-radius: 10px; background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-size: 16px; color: #333;}
-form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);} button.submit, button.submit-btn { background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; border: none; border-radius: 10px; padding: 12px 24px; cursor: pointer; font-weight: bold; box-shadow: var(--shadow); transition: all 0.3s ease;} button.submit:hover, button.submit-btn:hover {transform: scale(1.05); opacity: 0.9;}
- 
-    .package-card form {max-width: 500px; margin: 0 auto;}
-    .contact-info{margin-top:25px;text-align:center;font-size:18px;color:var(--deep);}
-    .contact-info a{color:var(--purple);font-weight:600;text-decoration:none;transition:color 0.3s;}
-    .contact-info a:hover{color:var(--pink);}
-
-.thank-you-card {background-color: #fff; border: 3px solid; border-image: linear-gradient(90deg, #ffb6c1, #ffd1dc, #b5e7a0, #b3e5fc, #fbcffc) 1; border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 500px;
-} h1 {font-size: 2em; color: #ff69b4; margin-bottom: 10px;
-} p {font-size: 1.1em; line-height: 1.5;}
-
-.home-button {margin-top: 25px; background-color: #ff69b4; color: white; border: none; padding: 10px 20px; border-radius: 25px; font-size: 1em; cursor: pointer; transition: background 0.3s ease;
-}
-
-.home-button:hover {background-color: #ff85c1;}
-
-footer {margin-top: 40px; font-size: 0.9em; color: #777;}
-    
-body {animation: fadeIn 0.7s ease-in-out;
-}
-
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }
-}
-   
-    footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
-  </style>
 </head>
 <body>
   <header>
