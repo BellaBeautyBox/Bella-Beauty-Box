@@ -7,7 +7,7 @@
   <title>Bella Beauty Box — Mobile Pamper Parties & Karaoke</title>
   <meta name="description" content="Mobile karaoke and pamper parties for kids, teens & adults — glam makeovers, karaoke, photo props & more." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
+  <style>
     :root{
       --pink:#ff5eb8;
       --purple:#c67aff;
@@ -34,75 +34,25 @@
     .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:100%;gap:10px;padding:10px;background:white;}
     .carousel img{flex:0 0 auto;width:80%;max-width:600px;height:350px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow);scroll-snap-align:center;}
 
-@media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .package-card {
-    width: 90%;
-    margin: 15px auto;
-  }
-
-  section {
-    padding: 20px 10px;
+    @media (max-width: 500px) {.packages-grid {grid-template-columns: 1fr;gap: 1.5rem;}
+    @media (max-width: 1024px) {
+  /* Tablet */
+  .package-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 }
 
-@media (max-width: 768px) {
-  header, nav, .brand {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {  /* Mobile */nav ul { display: flex; flex-direction: column; align-items: center;
   }
 
-  nav a {
-    display: block;
-    padding: 8px 0;
+  .package-cards {grid-template-columns: 1fr;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  form, .form-section {
-    width: 100%;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  h1, h2, h3, p, li {
-    text-align: center;
-  }
-
-  section, .package-card {
-    padding: 15px;
+  section, .content, .form {padding: 1rem; text-align: center;}h1, h2, h3, p {font-size: 1rem;
   }
 }
-
-@media (max-width: 480px) {
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.3rem; }
-  p, li, label { font-size: 0.95rem; }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  button, .submit-btn {
-    width: 100%;
-  }
-
-  .carousel img {width: 100%; height: auto;}}
-
                            
                                
    .form-card {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 400px; width: 100%; background: white;border-radius: 10px;box-shadow: 0 4px 5px rgba(0,0,0,0.1); border: 0.4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 2rem;}}
@@ -150,10 +100,8 @@ body {animation: fadeIn 0.7s ease-in-out;
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }
 }
    
-footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
+    footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
   </style>
-
-
 </head>
 <body>
   <header>
@@ -371,9 +319,8 @@ footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_autoresponse" value="Thank you for submitting your childs consent form. Love, Bella Beauty Box.">
               <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you-consent.html"
-            
-   
-     <h2 style="text-align:center;color:var(--deep)">Consent Form</h2>
+                
+    <h3 style="text-align:center;color:var(--deep)">Consent Form</h3>
           
         <label for="party-date">Party Date</label>
         <input type="date" id="party-date" name="party-date" required>
@@ -484,3 +431,4 @@ footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(
  </footer>
 </body>
 </html>
+
