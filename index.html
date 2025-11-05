@@ -7,6 +7,7 @@
   <title>Bella Beauty Box — Mobile Pamper Parties & Karaoke</title>
   <meta name="description" content="Mobile karaoke and pamper parties for kids, teens & adults — glam makeovers, karaoke, photo props & more." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
   <style> :root{ --pink:#ff5eb8; --purple:#c67aff; --mint:#96f7d2; --yellow:#ffe88a; --blue:#9ee6ff; --deep:#5a2070; --card:#fff9fe; --shadow:0 6px 20px rgba(90,32,112,0.15); font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
    
     { box-sizing: border-box; }
@@ -89,9 +90,36 @@ form input:focus, form select:focus, form textarea:focus {outline: none; box-sha
   /* --- Shrinking Header on Scroll --- */
 header {position: sticky; top: 0; z-index: 1000; transition: all 0.4s ease;} header.shrink {padding: 8px 0; background: linear-gradient(90deg, #f3b0f9, #d58bfc); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
 header.shrink .brand h1 {font-size: 1.6rem;} header.shrink nav a {font-size: 1rem;}
+
+                               /* === HEADER BASE STYLE === */
+header {position: sticky; top: 0; width: 100%; z-index: 1000; background: linear-gradient(135deg, #ff5ebc, #a084f9, #7ee8fa); color: white; text-align: center; padding: 1.5rem 1rem; transition: all 0.4s ease; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);}
+
+/* === SHRINK ON SCROLL === */
+header.shrink {padding: 0.7rem 1rem; background: linear-gradient(135deg, #ff4fab, #9575fa, #6ee8f5);}
+
+/* === LOGO + TITLE === */
+header h1 {font-size: 2rem; margin: 0.5rem 0; transition: font-size 0.3s ease;}
+header.shrink h1 {font-size: 1.5rem;}
+
+/* === NAVIGATION === */
+nav a {display: inline-block; margin: 0 10px; color: white; text-decoration: none; font-size: 1.2rem; transition: font-size 0.3s, color 0.3s;}
+nav a:hover {color: #ffe9f9;}
+header.shrink nav a {font-size: 1rem;}
+
+/* === MOBILE VIEW === */
+@media (max-width: 768px) {header {padding: 1rem 0.5rem;}
+header.shrink {padding: 0.6rem 0.5rem;}
+nav a {display: block; margin: 4px 0; font-size: 1rem;}
+header.shrink nav a {font-size: 0.9rem;}}   
+                               
 </style>
   
 </head>
+  
+  <script>window.addEventListener('scroll', function() {const header = document.querySelector('header');if (window.scrollY > 50) {header.classList.add('shrink');
+  } else {header.classList.remove('shrink');}});
+  </script>
+
 <body>
   <header>
     <div class="brand">
