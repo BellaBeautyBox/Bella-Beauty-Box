@@ -17,9 +17,8 @@
       --deep:#5a2070;
       --card:#fff9fe;
       --shadow:0 6px 20px rgba(90,32,112,0.15);
-      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
-    }
-  * { box-sizing: border-box; }
+      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
+   { box-sizing: border-box; }
     body{margin:10;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden;scroll-behavior:smooth}
     header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint));color:white;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
     .brand{display:flex;align-items:center;gap:12px}
@@ -36,36 +35,15 @@
 
     @media (max-width: 500px) {.packages-grid {grid-template-columns: 1fr;gap: 1.5rem;}
    /* Tablet */
-@media (max-width: 1024px) {
-  .package-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {nav {flex-direction: column; align-items: center;} nav a {display: block; margin: 8px 0; font-size: 1.2rem;
-  }
-
-  .package-cards {grid-template-columns: 1fr;
-  }section, .content, .form {padding: 1rem; text-align: center;
-  } h1, h2, h3, p {font-size: 1rem;
-  }
-
-  header {flex-direction: column; text-align: center;
-  }
-
-  .carousel img {width: 100%; height: auto;}}
+    @media (max-width: 1024px) {.package-cards {display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;}}
+   /* Mobile */
+    @media (max-width: 300px) {nav {flex-direction: column; align-items: center;} nav a {display: block; margin: 8px 0; font-size: 0.8rem; }
+                               
+   .package-cards {grid-template-columns: 1fr;}section, .content, .form {padding: 1rem; text-align: center;} h1, h2, h3, p {font-size: 1rem;} header {flex-direction: column; text-align: center;} .carousel img {width: 100%; height: auto;}}
                                                        
    .form-card {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 400px; width: 100%; background: white;border-radius: 10px;box-shadow: 0 4px 5px rgba(0,0,0,0.1); border: 0.4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 2rem;}}
-
-  .page-title {text-align: center; font-size: 2rem; font-weight: 700; margin-top: 40px; margin-bottom: 25px;
-  background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 1px;
-}
+    
+   .page-title {text-align: center; font-size: 2rem; font-weight: 700; margin-top: 40px; margin-bottom: 25px; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);-webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px;}
 
     .package-card{text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
     .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow))}
