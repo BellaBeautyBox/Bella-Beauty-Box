@@ -21,8 +21,9 @@
   header.shrink {padding: 10px 20px; background: linear-gradient(90deg, #ff4fab, #9575fa, #6ee8f5);}
 
     /* === BRAND === */
- brand h1 {font-size: 2.2rem; margin: 0;line-height: 1.2;}
- header.shrink .brand h1 {font-size: 1.8rem;}
+.brand h1 {font-size: 2.2rem; margin: 0; line-height: 1.2; color: white;}
+ header.shrink 
+.brand h1 {font-size: 1.8rem;}
 
     /* === NAVIGATION === */
 nav {display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;}
@@ -34,7 +35,7 @@ social-icons a:hover {color: var(--yellow);}
 
 /* === TABLET VIEW === */
 @media (max-width: 1024px) {header {flex-direction: column; text-align: center; padding: 16px 20px; }
-brand h1 {font-size: 2rem;}
+.brand h1 {font-size: 2rem;}
 nav {justify-content: center; flex-wrap: wrap; margin-top: 10px;}
 nav a {font-size: 1.2rem; margin: 6px 10px;}}
 
@@ -51,10 +52,19 @@ nav a {margin: 8px 0; font-size: 1.2rem;}}
 
 /* === SMALL MOBILE VIEW === */
 @media (max-width: 480px) {
-brand h1 {font-size: 1.6rem;}
+.brand h1 {font-size: 1.6rem;}
 nav a {font-size: 1rem;}}
 
-    
+    /* === MOBILE FIXES FOR MENU + SOCIAL ICONS === */
+@media (max-width: 768px) {header { flex-direction: column; align-items: center;}
+  .menu-toggle {align-self: flex-end; margin-right: 20px;}
+nav {order: 3; text-align: center; }
+  .social-icons {order: 4; display: flex; justify-content: center; width: 100%; margin-top: 10px; gap: 15px;}
+  .social-icons a {font-size: 1.5rem;}}
+    .menu-toggle {position: absolute; right: 20px; top: 22px;
+}
+
+
     nav a{margin-left:16px;color:white;text-decoration:none;font-size: 1.3rem; font-weight:200;transition:opacity 0.3s}
     nav a:hover{opacity:0.8}
 
