@@ -82,6 +82,21 @@ body {animation: fadeIn 0.7s ease-in-out;
 }
    
     footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
+    
+    /* --- Mobile Header Fix --- */
+    @media (max-width: 768px) {header { flex-direction: column; align-items: center; text-align: center; padding: 20px 10px; }
+   .brand h1 {font-size: 2rem; line-height: 1.2;} nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 10px;}
+    nav a { font-size: 1.1rem; margin: 5px 10px; padding: 6px 8px; display: inline-block;}
+   .social-icons { margin-top: 12px;}
+   .social-icons a {font-size: 22px;}
+
+   @media (max-width: 480px) { .brand h1 {font-size: 1.6rem; } nav a {font-size: 1rem;}}
+                               
+  /* --- Shrinking Header on Scroll --- */
+header {position: sticky; top: 0; z-index: 1000; transition: all 0.4s ease;} header.shrink {padding: 8px 0; background: linear-gradient(90deg, #f3b0f9, #d58bfc); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
+header.shrink .brand h1 {font-size: 1.6rem;} header.shrink nav a {font-size: 1rem;}
+
+
   </style>
 </head>
 <body>
