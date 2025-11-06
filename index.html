@@ -16,22 +16,102 @@
     
     .brand{display:flex;align-items:center;gap:12px}
     
-    /* === HEADER STYLES CLEANED AND FIXED === */
-  header {display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); color: white; padding: 20px 30px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; transition: all 0.4s ease;}
-  header.shrink {padding: 10px 20px; background: linear-gradient(90deg, #ff4fab, #9575fa, #6ee8f5);}
+/* === HEADER LAYOUT FIX === */
+header {
+  background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 15px;
+}
 
-    /* === BRAND === */
-.brand h1 {font-size: 2.2rem; margin: 0; line-height: 1.2; color: white;}
- header.shrink 
-.brand h1 {font-size: 1.8rem;}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
 
-    /* === NAVIGATION === */
-nav {display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;}
-nav a {color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; transition: opacity 0.3s, transform 0.3s;}
-nav a:hover {opacity: 0.85; transform: scale(1.05);}
+.brand h1 {
+  font-size: 1.6rem;
+  color: white;
+  margin: 0;
+}
 
-social-icons a {color: white; font-size: 1.4rem; margin-left: 10px; transition: color 0.3s;}
-social-icons a:hover {color: var(--yellow);}
+.menu-toggle {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--yellow);
+}
+
+/* Mobile nav dropdown */
+nav {
+  display: none;
+  flex-direction: column;
+  background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav.active {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* === MOBILE HEADER RESPONSIVE === */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .brand h1 {
+    font-size: 1.3rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
+
 
 /* === TABLET VIEW === */
 @media (max-width: 1024px) {header {flex-direction: column; text-align: center; padding: 16px 20px; }
@@ -87,8 +167,99 @@ nav a {font-size: 1rem;}}
     .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:100%;gap:10px;padding:10px;background:white;}
     .carousel img{flex:0 0 auto;width:80%;max-width:600px;height:350px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow);scroll-snap-align:center;}
                                                                                          
-     .form-card {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 400px; width: 100%; background: white;border-radius: 10px;box-shadow: 0 4px 5px rgba(0,0,0,0.1); border: 0.4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 2rem;}}
-    
+     /* === FORM WIDTH FIX === */
+.form-card form,
+form {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background: white;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-card {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+   /* === FORM CARD GRADIENT BORDER === */
+.form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+
+  /* Gradient border effect */
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* === FORM ELEMENTS INSIDE === */
+.form-card form {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card form label {
+  font-weight: 600;
+  color: var(--deep);
+  text-align: left;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-card form input,
+.form-card form textarea,
+.form-card form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background: #fff;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.form-card form input:focus,
+.form-card form textarea:focus,
+.form-card form select:focus {
+  outline: none;
+  border-color: #ff5eb8;
+  box-shadow: 0 0 8px rgba(255, 94, 184, 0.3);
+}
+
+/* === RESPONSIVE FORM === */
+@media (max-width: 768px) {
+  .form-card {
+    width: 95%;
+    padding: 1.5rem 1rem;
+  }
+}
+ 
      .page-title {text-align: center; font-size: 2rem; font-weight: 700; margin-top: 40px; margin-bottom: 25px; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);-webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px;}
                                
     .package-cards {grid-template-columns: 1fr;}section, .content, .form {padding: 1rem; text-align: center;} h1, h2, h3, p {font-size: 1rem;}
@@ -105,13 +276,19 @@ nav a {font-size: 1rem;}}
 form input, form select, form textarea { width: 100%; padding: 5px; border: 1px solid transparent; border-radius: 15px; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff); background-origin: border-box; background-clip: content-box, border-box; box-shadow: 0 1.5px 3px rgba(0,0,0,0.1); font-size: 16px; color: #333;}
 form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);}
 
-   .faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);}
+.faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);}
 
 
 form {display: flex; flex-direction: column; gap: 1rem; align-items: center; text-align: centre;}
 form label {font-weight: 600; color: var(--deep); width: 100%; text-align: centre;}
 form input, form select, form textarea {width: 100%; padding: 10px; border: 1px solid #333; border-radius: 10px; background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-size: 16px; color: #333;}
-form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);} button.submit, button.submit-btn { background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; border: none; border-radius: 10px; padding: 12px 24px; cursor: pointer; font-weight: bold; box-shadow: var(--shadow); transition: all 0.3s ease;} button.submit:hover, button.submit-btn:hover {transform: scale(1.05); opacity: 0.9;}
+form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);} 
+
+button.submit,button.submit-btn {background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); color: white; border: none; border-radius: 25px; padding: 12px 24px; font-weight: bold; cursor: pointer; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, opacity 0.3s ease;}
+
+button.submit:hover,
+button.submit-btn:hover {transform: scale(1.05); opacity: 0.9;}
+
  
     .package-card form {max-width: 500px; margin: 0 auto;}
     .contact-info{margin-top:25px;text-align:center;font-size:18px;color:var(--deep);}
@@ -218,18 +395,34 @@ form textarea {
   } else {header.classList.remove('shrink');}});
   </script>
 
+  <script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const navMenu = document.getElementById('nav-menu');
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+  
 <body>
-  <header>
-  <div class="brand">
-    <h1>Bella Beauty Box</h1>
+<header>
+  <div class="header-container">
+    <div class="brand">
+      <h1>Bella Beauty Box</h1>
+    </div>
+
+    <!-- HAMBURGER ICON -->
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
   </div>
 
-  <!-- HAMBURGER ICON -->
-  <div class="menu-toggle" id="mobile-menu">
-    <i class="fas fa-bars"></i>
-  </div>
-
-  <nav id="navbar">
+  <!-- NAVIGATION -->
+  <nav id="nav-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="booking.html">Booking</a>
@@ -237,17 +430,7 @@ form textarea {
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-  <div class="social-icons">
-    <a href="https://www.facebook.com/bellabeautyboxireland" target="_blank" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
 </header>
-
 
 
   <section id="home" class="hero">
