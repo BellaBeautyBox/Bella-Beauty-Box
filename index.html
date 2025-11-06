@@ -45,9 +45,9 @@ nav a {font-size: 1.2rem; margin: 6px 10px;}}
 .menu-toggle:hover {transform: scale(1.1);}
 
 @media (max-width: 768px) {.menu-toggle {display: block;}
-nav {display: none; flex-direction: column; width: 100%; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); border-top: 1px solid rgba(255, 255, 255, 0.3); padding: 10px 0;}
-nav.active {display: flex; }
-nav a {margin: 8px 0; font-size: 1.2rem;}}
+.nav {display: none; flex-direction: column; width: 100%; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); border-top: 1px solid rgba(255, 255, 255, 0.3); padding: 10px 0;}
+.nav.active {display: flex; }
+.nav a {margin: 8px 0; font-size: 1.2rem;}}
 
 
 /* === SMALL MOBILE VIEW === */
@@ -58,11 +58,10 @@ nav a {font-size: 1rem;}}
     /* === MOBILE FIXES FOR MENU + SOCIAL ICONS === */
 @media (max-width: 768px) {header { flex-direction: column; align-items: center;}
   .menu-toggle {align-self: flex-end; margin-right: 20px;}
-nav {order: 3; text-align: center; }
+  .nav {order: 3; text-align: center; }
   .social-icons {order: 4; display: flex; justify-content: center; width: 100%; margin-top: 10px; gap: 15px;}
   .social-icons a {font-size: 1.5rem;}}
-    .menu-toggle {position: absolute; right: 20px; top: 22px;
-}
+  .menu-toggle {position: absolute; right: 20px; top: 22px;}
 
 
     nav a{margin-left:16px;color:white;text-decoration:none;font-size: 1.3rem; font-weight:200;transition:opacity 0.3s}
