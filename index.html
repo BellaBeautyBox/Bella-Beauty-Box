@@ -135,7 +135,44 @@ nav a:hover {
   /* Show hamburger, hide desktop nav */
   .menu-toggle {display: block;}
 
+   { box-sizing: border-box; }
   
+    body{margin:10;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden;scroll-behavior:smooth}
+    
+    .brand{display:flex;align-items:center;gap:12px}
+    
+/* === HEADER LAYOUT FIX === */
+header {background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; padding: 12px 15px;}
+
+.header-container {display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap;}
+
+.brand h1 {font-size: 1.6rem; color: white; margin: 0;}
+
+.menu-toggle {font-size: 2rem; color: white; cursor: pointer; user-select: none; transition: transform 0.3s ease;}
+
+.menu-toggle:hover {ransform: scale(1.1);}
+
+.social-icons {display: flex; gap: 14px; align-items: center;}
+
+.social-icons a {color: white; font-size: 1.3rem; transition: color 0.3s ease;}
+
+.social-icons a:hover {color: var(--yellow);}
+
+/* Mobile nav dropdown */
+nav {display: none; flex-direction: column; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); text-align: center; padding: 10px 0;}
+
+nav.active {display: flex;}
+
+nav a {color: white; text-decoration: none; font-size: 1.2rem; padding: 8px; transition: opacity 0.3s;}
+
+nav a:hover {opacity: 0.8;}
+
+/* === MOBILE HEADER RESPONSIVE === */
+@media (max-width: 768px) {.header-container {justify-content: space-between;}
+.brand h1 {font-size: 1.3rem;}
+.menu-toggle {font-size: 1.8rem;}
+
+.social-icons a {font-size: 1.2rem;}
 
     
     { box-sizing: border-box; }
