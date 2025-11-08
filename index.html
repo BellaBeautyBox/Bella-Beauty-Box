@@ -14,24 +14,56 @@
   
     body{margin:10;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden;scroll-behavior:smooth}
     
-    .brand{display:flex;align-items:center;gap:12px}
+    .brand {
+    justify-self: start;
+  }
     
     /* === HEADER STYLES CLEANED AND FIXED === */
-  header {display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); color: white; padding: 20px 30px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; transition: all 0.4s ease;}
-  header.shrink {padding: 10px 20px; background: linear-gradient(90deg, #ff4fab, #9575fa, #6ee8f5);}
+  header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);
+  color: white;
+  padding: 15px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
     /* === BRAND === */
 .brand h1 {font-size: 2.2rem; margin: 0; line-height: 1.2; color: white;}
  header.shrink 
-.brand h1 {font-size: 1.8rem;}
+.brand h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
 
     /* === NAVIGATION === */
-nav {display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;}
-nav a {color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; transition: opacity 0.3s, transform 0.3s;}
+nav {
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
 nav a:hover {opacity: 0.85; transform: scale(1.05);}
 
-social-icons a {color: white; font-size: 1.4rem; margin-left: 10px; transition: color 0.3s;}
-social-icons a:hover {color: var(--yellow);}
+    .menu-toggle {
+    justify-self: center;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+    
+  .social-icons {
+    justify-self: end;
+    display: flex;
+    gap: 12px;
+  }
 
 /* === TABLET VIEW === */
 @media (max-width: 1024px) {header {flex-direction: column; text-align: center; padding: 16px 20px; }
@@ -41,20 +73,21 @@ nav a {font-size: 1.2rem; margin: 6px 10px;}}
 
 /* === MOBILE VIEW === */
 /* === HAMBURGER MENU === */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.3s ease;
-}
+
 .menu-toggle:hover { transform: scale(1.1); }
 
 @media (max-width: 768px) {
-  .menu-toggle { display: block; position: absolute; right: 25px; top: 25px; }
-  nav { display: none; flex-direction: column; width: 100%; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); padding: 15px 0; text-align: center; }
-  nav.active { display: flex; }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
   nav a { display: block; margin: 10px 0; font-size: 1.2rem; }
   .social-icons { display: flex; justify-content: center; gap: 15px; margin-top: 10px; }
   .social-icons a { font-size: 1.5rem; color: white; }
@@ -74,6 +107,18 @@ nav a {font-size: 1rem;}}
   .social-icons {order: 4; display: flex; justify-content: center; width: 100%; margin-top: 10px; gap: 15px;}
   .social-icons a {font-size: 1.5rem;}}
   .menu-toggle {position: absolute; right: 20px; top: 22px;}
+
+    @media (max-width: 768px) {
+  .package-card {
+    border-width: 2px;   /* thinner border */
+    padding: 1rem;
+  }
+
+  .form-card {
+    border-width: 2px;
+    padding: 1rem;
+  }
+}
 
 
     nav a{margin-left:16px;color:white;text-decoration:none;font-size: 1.3rem; font-weight:200;transition:opacity 0.3s}
@@ -96,26 +141,6 @@ form {
   padding: 0 1rem;
 }
 
-form input,
-form textarea,
-form select {
-  width: 100%;
-  box-sizing: border-box;
-  max-width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 1rem;
-  background: white;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  .form-card {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
 
      .page-title {text-align: center; font-size: 2rem; font-weight: 700; margin-top: 40px; margin-bottom: 25px; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);-webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px;}
                                
@@ -251,6 +276,23 @@ form textarea {
   .price-item {font-size: 1rem; flex-direction: row; justify-content: space-between;}
 }
 
+    form input,
+form select,
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  form input,
+  form select,
+  form textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
     
 </style>
   
@@ -266,23 +308,14 @@ form textarea {
   
 
 <body>
-  <header>
-  <div class="header-container">
-    <div class="brand">
-      <h1>Bella Beauty Box</h1>
-    </div>
-
-    <!-- HAMBURGER ICON -->
-    <div class="menu-toggle" id="mobile-menu">☰</div>
-
-    <!-- SOCIAL ICONS -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    </div>
+<header>
+  <div class="brand"><h1>Bella Beauty Box</h1></div>
+  <div class="menu-toggle" id="mobile-menu">☰</div>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
 
-  <!-- NAVIGATION -->
   <nav id="nav-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -623,17 +656,14 @@ form textarea {
     else header.classList.remove('shrink');
   });
 
-  // Mobile menu toggle
-  const menuToggle = document.getElementById('mobile-menu');
-  const nav = document.getElementById('navbar');
-  menuToggle.addEventListener('click', () => {nav.classList.toggle('active');});
-</script>
-  
-<script>
+ <script>
   const menuToggle = document.getElementById("mobile-menu");
-  const navMenu = document.getElementById("nav-menu");menuToggle.addEventListener("click", () => {navMenu.classList.toggle("active");});
-</script>
+  const navMenu = document.getElementById("nav-menu");
 
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
 
   
 </body>
