@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Bella Beauty Box</title>
+  <meta name="description" content="Book your Bella Beauty Box pamper party or karaoke experience — quick and easy online form." />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <h1>Bella Beauty Box</h1>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html" class="active">Booking</a>
+      <a href="consent.html">Consent</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Booking Form</h1>
+    <h2>Secure your sparkle ✨</h2>
+    <p>Fill out the form below and we’ll be in touch to confirm your pamper or karaoke party. We can’t wait to make your celebration shine!</p>
+  </section>
+
+  <section id="booking">
+    <div class="package-card">
+      <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Booking Submission!">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Thank you! Your booking has been submitted. Someone from the team will be in touch to confirm your request. Love, Bella Beauty Box.">
+        <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you.html">
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="package">Select Package</label>
+        <select id="package" name="package" required>
+          <option value="">Choose a Package</option>
+          <option value="Princess Pop Package">Princess Pop Package</option>
+          <option value="VIPrincess Pac
