@@ -307,3 +307,53 @@ footer .social-icons {
   margin-top: 10px;
   justify-content: center;
 }
+
+/* === CONTACT INFO SECTION === */
+.contact-info {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--deep);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.contact-detail {
+  margin: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-detail i {
+  color: var(--purple);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.contact-info a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: var(--pink);
+}
+
+/* Subtle hover animation */
+.contact-detail:hover {
+  transform: translateY(-3px);
+}
+
+.contact-detail:hover i {
+  color: var(--pink);
+}
+
+/* Smooth entrance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
