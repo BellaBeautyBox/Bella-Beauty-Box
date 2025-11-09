@@ -174,45 +174,34 @@ nav a:hover {
   }
 }
 
-/* === PACKAGE CARDS === */
+/* === PACKAGE & FORM CARD REFINEMENT === */
 .package-card {
   text-align: center;
-  border-radius: 25px;
+  border-radius: 22px;
   background: white;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   background-image: linear-gradient(white, white),
     linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
   background-origin: border-box;
   background-clip: content-box, border-box;
   margin: 25px auto;
-  padding: 35px;
+  padding: 25px;
   max-width: 700px;
   transition: all 0.3s ease;
 }
 
-.package-card h3 {
-  color: var(--deep);
-  margin-top: 10px;
-}
-
-.package-card p {
-  color: #5b3d5b;
-  line-height: 1.5;
-}
-
 @media (min-width: 1025px) {
   .package-card {
-    border-width: 1.2px;
-    padding: 25px 40px;
+    border-width: 1px;
+    padding: 25px 30px;
     border-radius: 20px;
   }
 }
 
-  .package-card h3,
-  .package-card p {
-    text-align: center;
-  }
+.package-card h3,
+.package-card p {
+  text-align: center;
 }
 
 /* === FORMS === */
@@ -221,24 +210,25 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 form label {
   font-weight: 600;
   color: var(--deep);
   text-align: left;
-  width: 85%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 480px;
 }
 
 form input,
 form select,
 form textarea {
-  width: 85%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 480px;
   padding: 12px 14px;
   border: 1px solid #ddd;
-  border-radius: 15px; /* ✅ Rounded corners for consistency */
+  border-radius: 12px;
   font-size: 1rem;
   color: #333;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -255,17 +245,21 @@ form textarea:focus {
   transform: scale(1.01);
 }
 
-/* Mobile refinement */
+/* Adjust for mobile/tablet */
 @media (max-width: 768px) {
   form label,
   form input,
   form select,
   form textarea {
     width: 90%;
-    border-radius: 12px;
+    max-width: none;
+    border-radius: 10px;
+  }
+  .package-card {
+    border-width: 1.2px;
+    padding: 20px;
   }
 }
-
 
 /* === BUTTONS === */
 .book-btn,
