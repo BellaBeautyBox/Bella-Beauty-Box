@@ -20,74 +20,27 @@
       font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
     }
 
-    body {
-      margin:0;
-      background:linear-gradient(180deg,#ffe6fa,#fff);
-      color:#3b2a3b;
-      overflow-x:hidden;
-      scroll-behavior:smooth;
-    }
+    body {margin:0; background:linear-gradient(180deg,#ffe6fa,#fff); color:#3b2a3b; overflow-x:hidden;scroll-behavior:smooth;}
 
     /* === HEADER === */
-    header {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint));
-      color:white;
-      padding:20px 28px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-      position:sticky;
-      top:0;
-      z-index:1000;
-      transition:all 0.4s ease;
-    }
+    header {display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint)); color:white;
+      padding:20px 28px; box-shadow:0 4px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; transition:all 0.4s ease;}
 
-    header.shrink {
-      padding:10px 20px;
-      background:linear-gradient(90deg,#ff4fab,#9575fa,#6ee8f5);
-    }
+    header.shrink {padding:10px 20px; background:linear-gradient(90deg,#ff4fab,#9575fa,#6ee8f5);}
 
-    .brand h1 {
-      font-size:2rem;
-      margin:0;
-      font-weight:600;
-    }
+    .brand h1 {font-size:2rem; margin:0; font-weight:600;}
 
-    nav {
-      display:flex;
-      align-items:center;
-      gap:16px;
-    }
+    nav { display:flex; align-items:center; gap:16px;}
 
-    nav a {
-      color:white;
-      text-decoration:none;
-      font-size:1.2rem;
-      transition:opacity 0.3s, transform 0.3s;
-    }
+    nav a {color:white; text-decoration:none; font-size:1.2rem; transition:opacity 0.3s, transform 0.3s;}
 
-    nav a:hover {
-      opacity:0.8;
-      transform:scale(1.05);
-    }
+    nav a:hover { opacity:0.8; transform:scale(1.05);}
 
-    .social-icons {
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+    .social-icons { display:flex; align-items:center; gap:12px;}
 
-    .social-icons a {
-      color:white;
-      font-size:1.3rem;
-      transition:color 0.3s ease;
-    }
+    .social-icons a {color:white; font-size:1.3rem; transition:color 0.3s ease;}
 
-    .social-icons a:hover {
-      color:var(--yellow);
-    }
+    .social-icons a:hover {color:var(--yellow);}
 
     /* === HAMBURGER === */
     .menu-toggle {
