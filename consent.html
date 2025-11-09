@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Consent Form | Bella Beauty Box</title>
+  <meta name="description" content="Submit your child’s consent form for Bella Beauty Box pamper and karaoke parties." />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <h1>Bella Beauty Box</h1>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="consent.html" class="active">Consent</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Consent Form</h1>
+    <h2>For all Bella Beauty Box guests 💕</h2>
+    <p>Please fill in the consent form below before your event. We value safety and comfort for every guest.</p>
+  </section>
+
+  <!-- CONSENT FORM -->
+  <section id="consent">
+    <div class="package-card">
+      <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Consent Form Submission!">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Thank you for submitting your child’s consent form. Love, Bella Beauty Box.">
+        <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you-consent.html">
+
+        <label for="party-date">Party Date</label>
+        <input type="date" id="party-date" name="party-date" required>
+
+        <label for="party-time">Party Time</label>
+        <input type="time" id="party-time" name="party-time" required>
+
+        <label for="guest-name">Guest First Name</label>
+        <input type="text" id="guest-name" name="guest-name" required>
+
+        <label for="guardian-name">Parent / Guardian Name</label>
+        <input type="text" id="guardian-name" name="guardian-name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="photo-use">Use of Photography / Videos</label>
+        <select id="photo-use" name="photo-use" required>
+          <option value="">Select Option</option>
+          <option value="yes">Yes - I give permission</option>
+          <option value="no">No - I do not give permission</option>
+        </select>
+
+        <label for="skin-allergies">Skin Allergies (if any)</label>
+        <input type="text" id="skin-allergies" name="skin-allergies">
+
+        <label for="food-allergies">Food Allergies (if any)</label>
+        <textarea id="food-allergies" name="food-allergies" rows="2"></textarea>
+
+        <label for="comments">Any Other Comments</label>
+        <textarea id="comments" name="comments" rows="3"></textarea>
+
+        <label for="parent-signature">Parent's Full Name (acts as signature)</label>
+        <input type="text" id="parent-signature" name="parent-signature" required>
+
+        <button class="submit" type="submit">Submit Consent Form</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bella Beauty Box. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenu.innerHTML = navMenu.classList.contains('active')
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>
