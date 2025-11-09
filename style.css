@@ -285,6 +285,8 @@ button.submit-btn:hover {
   opacity: 0.9;
 }
 
+ .faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);} 
+
 /* === THANK YOU CARD === */
 .thank-you-card {
   background-color: #fff;
