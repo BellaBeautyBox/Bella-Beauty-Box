@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Bella Beauty Box</title>
+  <meta name="description" content="Discover Bella Beauty Box packages – pamper, karaoke and hair extension services for all ages." />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <h1>Bella Beauty Box</h1>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="consent.html">Consent</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Our Services</h1>
+    <h2>Choose your sparkle ✨</h2>
+    <p>Explore our fabulous Bella Beauty Box packages designed for every age, mood, and occasion — from mini makeovers to full glam and glitter karaoke parties!</p>
+  </section>
+
+  <section id="packages">
+    <div class="package-card">
+      <h3>Princess Pop Package — €28 per guest</h3>
+      <p>The perfect party for little princesses ready to shine. Includes pampering, karaoke fun, and creative play!</p>
+      <ul>
+        <p>Nail Painting</p>
+        <p>Fun Hair</p>
+        <p>Face Gems</p>
+        <p>Temporary Tattoo</p>
+      </ul>
+      <a href="booking.html" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="package-card">
+      <h3>VIPrincess Package — €35 per guest</h3>
+      <p>For the ultimate sparkle lovers — a full pamper and party experience with karaoke, creativity, and gifts.</p>
+      <ul>
+        <p>Manicure & Pedicure</p>
+        <p>Fun Hair & Make-Up</p>
+        <p>Photo Props & Party Bags</p>
+      </ul>
+      <a href="booking.html" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="package-card">
+      <h3>Queen Teen Package — €38 per guest</h3>
+      <p>Designed for teens who want to feel fabulous. Enjoy makeovers, karaoke, and plenty of photo-ready fun!</p>
+      <ul>
+        <p>Mini Mani & Pedi</p>
+        <p>Hair Styling</p>
+        <p>Mocktails & Karaoke</p>
+      </ul>
+      <a href="booking.html" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="package-card">
+      <h3>Custom Party Package — Price on Request</h3>
+      <p>Create your dream celebration — from birthdays to corporate events. We’ll tailor the glam to you.</p>
+      <ul>
+        <p>Weddings, Communions, Confirmations</p>
+        <p>Corporate & Private Events</p>
+        <p>Photo & Karaoke Extras</p>
+      </ul>
+      <a href="booking.html" class="book-btn">Enquire Now</a>
+    </div>
+
+    <div class="package-card gold">
+      <h3>Hair Extensions</h3>
+      <p>20” Double-drawn I-tip extensions using high-quality human hair. Add volume, length & luxury!</p>
+      <div class="price-list">
+        <div class="price-item"><span>Half Head 60g</span><span>€250</span></div>
+        <div class="price-item"><span>3/4 Head 90g</span><span>€345</span></div>
+        <div class="price-item"><span>Full Head 120g</span><span>€420</span></div>
+      </div>
+      <a href="booking.html" class="book-btn">Book Consultation</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Bella Beauty Box. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenu.innerHTML = navMenu.classList.contains('active')
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>
