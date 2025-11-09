@@ -180,7 +180,7 @@ nav a:hover {
   border-radius: 16px;
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  border: 1.5px solid transparent;
+  border: 1px solid transparent;
   background-image: linear-gradient(white, white),
     linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
   background-origin: border-box;
@@ -202,8 +202,8 @@ nav a:hover {
 
 @media (max-width: 768px) {
   .package-card {
-    border-width: 2px;
-    padding: 15px;
+    border-width: 1px;
+    padding: 8px;
   }
 
   .package-card h3,
