@@ -280,6 +280,13 @@ button.submit-btn:hover {
 
  .faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);} 
 
+ .price-list {display: flex;  flex-direction: column; gap: 10px; margin: 20px auto; max-width: 400px;}
+
+ .price-item { display: flex; justify-content: space-between; background: white;
+  padding: 10px 15px; border-radius: 12px;
+  border: 1px solid #f1c6f1; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 1.1rem; font-weight: 500;}
+
 /* === THANK YOU CARD === */
 .thank-you-card {
   background-color: #fff;
