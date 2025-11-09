@@ -1,69 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Thank You | Bella Beauty Box</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      color: #444;
-    }
-    .thank-you-card {
-      background-color: #fff;
-      border: 3px solid;
-      border-image: linear-gradient(90deg, #ffb6c1, #ffd1dc, #b5e7a0, #b3e5fc, #fbcffc) 1;
-      border-radius: 20px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      max-width: 500px;
-    }
-    h1 {
-      font-size: 2em;
-      color: #ff69b4;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1em;
-      line-height: 1.5;
-    }
-    .home-button {
-      margin-top: 25px;
-      background-color: #ff69b4;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .home-button:hover {
-      background-color: #ff85c1;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-  <div class="thank-you-card">
-    <h1>Thank You! 💖</h1>
-    <p>Your booking has been submitted successfully.<br>
-    Someone from the team will be in touch soon to confirm your request.<br><br>
-    Love, Bella Beauty Box 💅</p>
-    <button class="home-button" onclick="window.location.href='index.html'">Return Home</button>
-  </div>
-  <footer>© 2025 Bella Beauty Box. All rights reserved.</footer>
+  <header>
+    <div class="brand">
+      <h1>Bella Beauty Box</h1>
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="consent.html">Consent</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="thank-you-card">
+      <h1>Thank You!</h1>
+      <p>Your booking request has been received.  
+      Someone from the Bella Beauty Box team will be in touch shortly to confirm your event details.</p>
+      <a href="index.html" class="book-btn">Back to Home</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Bella Beauty Box. All rights reserved.</p>
+  </footer>
 </body>
 </html>
