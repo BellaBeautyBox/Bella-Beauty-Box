@@ -2,181 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bella Beauty Box</title>
   <meta name="description" content="Mobile karaoke and pamper parties for kids, teens & adults — glam makeovers, karaoke, photo props & more." />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --pink:#ff5eb8;
-      --purple:#c67aff;
-      --mint:#96f7d2;
-      --yellow:#ffe88a;
-      --blue:#9ee6ff;
-      --deep:#5a2070;
-      --shadow:0 6px 20px rgba(90,32,112,0.15);
-      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
-    }
-
-    body {margin:0; background:linear-gradient(180deg,#ffe6fa,#fff); color:#3b2a3b; overflow-x:hidden;scroll-behavior:smooth;}
-
-    /* === HEADER === */
-    header {display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint)); color:white;
-      padding:20px 28px; box-shadow:0 4px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; transition:all 0.4s ease;}
-
-    header.shrink {padding:10px 20px; background:linear-gradient(90deg,#ff4fab,#9575fa,#6ee8f5);}
-
-    .brand h1 {font-size:2rem; margin:0; font-weight:600;}
-
-    nav { display:flex; align-items:center; gap:16px;}
-
-    nav a {color:white; text-decoration:none; font-size:1.2rem; transition:opacity 0.3s, transform 0.3s;}
-
-    nav a:hover { opacity:0.8; transform:scale(1.05);}
-
-    .social-icons { display:flex; align-items:center; gap:12px;}
-
-    .social-icons a {color:white; font-size:1.3rem; transition:color 0.3s ease;}
-
-    .social-icons a:hover {color:var(--yellow);}
-
-    /* === HAMBURGER === */
-    .menu-toggle {
-      display:none;
-      font-size:2rem;
-      color:white;
-      cursor:pointer;
-      user-select:none;
-    }
-
-    @media (max-width:1024px) {
-      .menu-toggle { display:block; }
-      nav {
-        display:none;
-        flex-direction:column;
-        width:100%;
-        background:linear-gradient(90deg,var(--pink),var(--purple),var(--mint));
-        border-top:1px solid rgba(255,255,255,0.3);
-        padding:10px 0;
-      }
-      nav.active { display:flex; }
-      nav a { margin:8px 0; font-size:1.2rem; }
-    }
-
-    /* === HERO === */
-    section.hero {
-      text-align:center;
-      padding:60px 20px;
-    }
-
-    .hero h1 {
-      font-size:2.4rem;
-      color:var(--deep);
-    }
-
-    .hero h2 {
-      font-size:1.8rem;
-      color:var(--purple);
-      margin:10px 0 20px;
-    }
-
-    .hero p {
-      max-width:800px;
-      margin:0 auto;
-      font-size:1.1rem;
-      line-height:1.6;
-    }
-
-    /* === PACKAGE CARDS === */
-    .package-card {
-      text-align:center;
-      border-radius:20px;
-      background:white;
-      box-shadow:0 2px 3px rgba(0,0,0,0.1);
-      border:1px solid transparent;
-      background-image:linear-gradient(white, white),
-        linear-gradient(90deg,#ffb3ba,#ffdfba,#ffffba,#baffc9,#bae1ff);
-      background-origin:border-box;
-      background-clip:content-box, border-box;
-      margin:20px auto;
-      padding:20px;
-      max-width:600px;
-    }
-
-    .package-card h3 {margin-top:20px;color:var(--deep);}
-
-    .package-card p {color:#5b3d5b; line-height:1.5;}
-
-    @media (max-width:768px) {
-      .package-card {
-        border-width:1px;
-        padding:10px;
-      }
-      .package-card h3, .package-card p {text-align:center;}
-    }
-
-      /* === CAROUSEL === */
-    .carousel {
-      display:flex;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      scroll-behavior:smooth;
-      width:100%;
-      gap:10px;
-      padding:10px;
-      background:white;
-      border-radius:10px;
-    }
-
-    .carousel img {
-      flex:0 0 auto;
-      width:80%;
-      max-width:600px;
-      height:350px;
-      object-fit:cover;
-      border-radius:20px;
-      box-shadow:var(--shadow);
-      scroll-snap-align:center;
-    }
-
-    @media (max-width:768px) {
-      .carousel img {
-        width:100%;
-        height:auto;
-      }
-    }
- .book-btn {display: inline-block; margin: 15px 0; padding: 10px 20px; background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; text-decoration: none; border-radius: 25px; font-weight: bold;
-  form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);} button.submit, button.submit-btn { background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; border: none; border-radius: 10px; padding: 12px 24px; cursor: pointer; font-weight: bold; box-shadow: var(--shadow); transition: all 0.3s ease;} button.submit:hover, button.submit-btn:hover {transform: scale(1.05); opacity: 0.9;}
-                 
- .price-list {display: flex;  flex-direction: column; gap: 10px; margin: 20px auto; max-width: 400px;}
-
- .price-item { display: flex; justify-content: space-between; background: white;
-  padding: 10px 15px; border-radius: 12px;
-  border: 1px solid #f1c6f1; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  font-size: 1.1rem; font-weight: 500;
-
- .faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);} 
- .contact-info{margin-top:25px;text-align:center;font-size:18px;color:var(--deep);}
- .contact-info a{color:var(--purple);font-weight:600;text-decoration:none;transition:color 0.3s;}
- .contact-info a:hover{color:var(--pink);}
- .thank-you-card {background-color: #fff; border: 3px solid; border-image: linear-gradient(90deg, #ffb6c1, #ffd1dc, #b5e7a0, #b3e5fc, #fbcffc) 1; border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 500px;
-} h1 {font-size: 2em; color: #ff69b4; margin-bottom: 10px;
-} p {font-size: 1.1em; line-height: 1.5;}      
-
-
-    footer {
-      text-align:center;
-      background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));
-      color:white;
-      padding:20px;
-      margin-top:40px;
-    }
-  </style>
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
     <div class="brand">
       <h1>Bella Beauty Box</h1>
@@ -188,26 +22,21 @@
 
     <nav id="nav-menu">
       <a href="index.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="#booking">Booking</a>
-      <a href="#consent">Consent</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="consent.html">Consent</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-        </a>
-
-      <a href="#"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram">
-         </a>
-
-      <a href="#"><i class="fab fa-tiktok"></i><a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok">
-         </a>
-
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <h1>Bring The Perfect Party To You</h1>
     <h2>Glam makeovers, karaoke & endless fun!</h2>
@@ -222,25 +51,31 @@
       <img src="Images/party7.jpg" alt="birthday" />
       <img src="Images/party8.jpg" alt="music" />
       <img src="Images/party9.jpg" alt="pink room" />
-      
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bella Beauty Box. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+  <!-- JS -->
   <script>
-    // Shrink on scroll
+    // Shrink header on scroll
     window.addEventListener('scroll', function() {
       const header = document.querySelector('header');
-      if (window.scrollY > 50) {
-        header.classList.add('shrink');
-      } else {
-        header.classList.remove('shrink');
-      }
+      if (window.scrollY > 50) header.classList.add('shrink');
+      else header.classList.remove('shrink');
     });
 
-    // Hamburger toggle
+    // Mobile menu toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
-
     mobileMenu.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       mobileMenu.innerHTML = navMenu.classList.contains('active')
@@ -250,313 +85,4 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-    <section id="services">     
-    <div class="package-card">
-                                                                  <h3>Princess Pop Package — €28 per guest</h3>
-           <p>Bella Beauty Box introduces the ‘Princess Pop Package’. The perfect package for little Princesses ready to party and sparkle. Indulge in treatments, sing to your heart’s content.</p>
-                                                                         <h4>Package includes:</h4>
-                                                    <p>Choice of services (2 For Main Guest & 1 For Everyone Else)</p>
-                                                                                  <ul>
-                                                                         <p>Nail Painting</p>
-                                                                           <p>Fun Hair</p>
-                                                                          <p>Face Gems</p>
-                                                                      <p>Temporary Tattoo</p>
-                                                                                 </ul>
-                                                                 <h4>For the duration of the event:</h4>
-                                                                                  <ul>
-                                                                <p>Robes + headbands for all guests</p>
-                                                                        <p>Karaoke section</p>
-                                                                       <p>Creativity section</p>
-                                                             <p>Photo Props such as hats, wigs and more</p>
-                                                                      <p>90 Minutes Party Time</p>
-                                                                                 </ul>
-                                                                           <h4>Optional:</h4>
-                                                                                 <ul>
-                            <p>‘Bella Beauty Box’ For Main Guest (Examples include: Eye Mask, Face Gems, Hair Braid, Keyring, Tattoos and more, €30 extra)</p>
-                                                      <p>Juices & Sweets For Entire Party (€3 Per Guest)</p>
-                                                      <p>Downloadable party invites available on request</p>
-
-                                                                                </ul>
-      <a href="#booking" class="book-btn">Book Now</a>
-    </div>
-</section>
-        
-
-    <div class="package-card">
-      <h3>VIPrincess Package — €35 per guest</h3>
-       <p>Bella Beauty Box introduces the ultimate ‘VIPrincess Package’. This is where the Princess scene meets the ultimate party scene, designed for those who crave a unique experience with all that sparkles and shines.</p>
-      <h4>Package includes:</h4>
-      <p>Choice of services (4 For Main Guest & 2 For Everyone Else)</p>
-         <ul>
-        <p>Finger Nail Painting</p>
-        <p>Toe Nail Painting</p>
-        <p>Fun Hair</p>
-        <p>Face Gems</p>
-      </ul>
-      <h4>For the duration of the event:</h4>
-      <ul>
-        <p>Crown & Sash for main guest</p>
-        <lip>Robes + headbands for all guests</p>
-        <p>Karaoke section</p>
-        <p>Creativity section</p>
-        <p>Photo Props such as crowns, blow up instruments and more</p>
-        <p>Up to 2.5Hrs Party Time</p>
-      </ul>
-      <h4>Included:</h4>
-      <ul>
-        <p>‘Bella Beauty Box’ For Main Guest (Examples include: Eye Mask, Face Gems, Hair Braid, Keyring, Tattoos and more, €30 extra)</p>
-        <p>Party Bags for Entire Party (Examples include: Gems, Keyring, Stickers, Tattoos)</p>
-        <p>Juices & Sweets For Entire Party</p>
-        <p>Downloadable party invites available on request</p>
-
-      </ul>
-        <a href="#booking" class="book-btn">Book Now</a>
-    </div>
-
-     </section>   
-
-    <div class="package-card">
-      <h3>Queen Teen Package — €38 per guest</h3>
-        <p>Bella Beauty Box introduces a Beauty Queens dream party the ‘Queen Teen Package’. Spoil yourself to being treated like a Queen then take to the karaoke floor and unleash your inner diva!</p>
-      <h4>Package includes:</h4>
-      <p>Choice of services (2 For Main Guest & 1 For Everyone Else)</p>
-         <ul>
-        <p>Mini Manicure</p>
-        <p>Mini Pedicure</p>
-        <p>Hair Styling (Curling, Crimping, Straightening)</p>
-      </ul>
-      <h4>For the duration of the event:</h4>
-      <ul>
-        <p>Mocktail Reception</p>
-        <p>Crown & Sash for Main Guest</p>
-        <p>Robes + headbands for all guests</p>
-        <p>Karaoke section</p>
-        <p>Make-Up Station</p>
-        <p>Photo Props such as crowns, blow up instruments and more</p>
-      </ul>
-      <h4>Included:</h4>
-      <ul>
-        <p>Sodas & Snacks Platter For Entire Party</p>
-        <p>Downloadable party invites available on request</p>
-        <p>Up to 3Hrs Party Time</p>
-      </ul>
-      <h4>Optional:</h4>
-      <ul>
-        <p>‘Bella Beauty Box’ For Main Guest (Examples include: Nail Polish, Pocket Mirror, Lipstick, Eyeshadow and more, €40 extra)</p>
-      </ul>
-        <a href="#booking" class="book-btn">Book Now</a>
-    </div>
-
-     </section>   
-
-    <div class="package-card">
-      <h3>Custom Package — Price on Request</h3>
-       <h4>Let’s create your own custom pamper or karaoke party! Choose your services, themes, and extras for an unforgettable event tailored just for you.</h4>
-       <ul>
-          <p>Weddings</p>
-          <p>Holy Communions / Confirmations / Debs</p>
-          <p>Family Events</p>
-          <p>Corporate Events</p>
-       </ul>
-        <a href="#booking" class="book-btn">Book Now</a>
-    </div>
-
-  </section>
-        
-
-    <div class="package-card gold">
-      <h3>Hair Extensions</h3>
-       <h4>Let us come to you and add beautiful length and thickness. Be the Queen you deserve to be with 20” Double-drawn high quality human hair I-tip extensions.</h4>
-       <ul>
-<div class="price-list">
-  <div class="price-item">
-    <span>Half Head 60g</span>
-    <span>€250</span>
-  </div>
-  <div class="price-item">
-    <span>3/4 Head 90g</span>
-    <span>€345</span>
-  </div>
-  <div class="price-item">
-    <span>Full Head 120g</span>
-    <span>€420</span>
-  </div>
-         </ul>
-        <a href="#booking" class="book-btn">Book Now</a>
-</div>
-</section>
-              </form>
-    </div>
-  </section>
-        
-  <section id="booking">
-   <div class="package-card">
-      <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
-        
-      <input type="hidden" name="_subject" value="New Booking Submission!">
-      <input type="hidden" name="_template" value="box">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_autoresponse" value="Thank you! Your booking has been submitted. Someone from the team will be in touch to confirm your request. Love, Bella Beauty Box.">
-      <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you.html">
-        
-   <h2 class="page-title">Booking Form</h2>
-
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="date">Preferred Date</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="time">Preferred Time</label>
-        <input type="time" id="time" name="time" required>
-
-        <label for="package">Select Package</label>
-        <select id="package" name="package">
-          <option value="Princess Pop Package">Princess Pop Package</option>
-          <option value="VIPrincess Package">VIPrincess Package</option>
-          <option value="Queen Teen Package">Queen Teen Package</option>
-          <option value="Custom Package">Custom Package</option>
-          <option value="Hair Extensions">Hair Extensions</option>
-        </select>
-
-        <label for="message">Party Information</label>
-        <textarea id="message" name="message" rows="4" placeholder="Include party size, special requests and any other information"></textarea>
-
-        <button class="submit" type="submit">Send Booking Request</button>
-      </form>
-    </div>
-  </section>
-  
-<section id="consent" class="form-consent">
-<div class="package-card">
-   <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
-
-<input type="hidden" name="_next" value="https://bellabeautybox.ie/consent-thanks.html"> 
-              <input type="hidden" name="_subject" value="New Booking Submission!">
-              <input type="hidden" name="_template" value="box">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_autoresponse" value="Thank you for submitting your childs consent form. Love, Bella Beauty Box.">
-              <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you-consent.html">
-  
-<h2 class="page-title">Consent Form</h2>
-    
-        <label for="party-date">Party Date</label>
-        <input type="date" id="party-date" name="party-date" required>
-         
-        <label for="party-time">Party Time</label>
-        <input type="time" id="party-time" name="party-time" required>
-
-        <label for="guest-name">Guest First Name</label>
-        <input type="text" id="guest-name" name="guest-name" required>
-
-        <label for="guardian-name">Parent / Guardian Name</label>
-        <input type="text" id="guardian-name" name="guardian-name" required>
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required>
-
-        <label for="photo-use">Use of Photography / Videos</label>
-        <select id="photo-use" name="photo-use" required>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-
-        <label for="skin-allergies">Skin Allergies (if any)</label>
-        <input type="text" id="skin-allergies" name="skin-allergies">
-
-        <label for="food-allergies">Food Allergies (if any)</label>
-        <textarea id="food-allergies" name="food-allergies" rows="2"></textarea>
-
-        <label for="comments">Any other comments</label>
-        <textarea id="comments" name="comments" rows="3"></textarea>
-
-        <label for="parent-signature">Parent's Full Name (acts as Signature)</label>
-        <input type="text" id="parent-signature" name="parent-signature" required>
-
-        <button class="submit" type="submit">Submit Consent Form</button>
-      </form>
-    </div>
-  </section>
-
- <section id="faq">
-  <div class="faq-wrap">
-  <h2 style="text-align:center;color:var(--deep)">Frequently Asked Questions</h2>
-    
-
-    <div class="faq-grid">
-      <div class="faq-pill"><div class="faq-q">Do I need to pay a deposit?<br><small style="font-weight:400;">Yes — 25% is required to secure bookings.</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">What is your cancellation policy?<br><small style="font-weight:400;">Deposit is non-refundable but can be used for a future party.</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">What ages are the parties suitable for?<br><small style="font-weight:400;">Ages 5+, teens, and adults.</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">How many guests can I invite?<br><small style="font-weight:400;">We cater for 4–12 guests (contact us for larger groups).</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">Do you travel outside Limerick?<br><small style="font-weight:400;">Yes — Limerick, Clare, Tipperary & surrounds (travel fee may apply).</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">Are the products safe for children?<br><small style="font-weight:400;">Yes — child-friendly products; list allergies on the consent form.</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">How far in advance should I book?<br><small style="font-weight:400;">We recommend 3–4 weeks in advance.</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">Is there anything I need to provide?<br><small style="font-weight:400;">An open, flat space to park and access to an electrical socket.</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">Will you take videos and photos?<br><small style="font-weight:400;">Yes — with consent; they’ll be sent to the person who booked.</small></div></div>
-
-      <div class="faq-pill"><div class="faq-q">What happens during bad weather?<br><small style="font-weight:400;">We’re enclosed and can operate in most weather; severe weather may require reschedule.</small></div></div>
-    </div>
-   </section>
-        
-  <section id="contact" class="form-section">
-  <div class="package-card">
-    <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
-    <form id="contactForm">
-      
-              <input type="hidden" name="_subject" value="New Booking Submission!">
-              <input type="hidden" name="_template" value="box">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_autoresponse" value="Thank you for getting in touch. We’ll reply as soon as possible!Love Bella Beauty Box">
-              <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you-contact.html">
-                
-  <h2 class="page-title">Contact Us</h2>
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required>
-      <label for="email">Email</label>
-    <input id="email" name="email" type="email" required>
-       <label for="message">Query</label>
-       <textarea id="message" name="message" rows="4" required></textarea>
-       <button type="submit" class="submit-btn">Send Message</button>
-     </form>
-   </div>
- </section>
-
- <div class="contact-info">
-   <p><strong>Email:</strong> <a href="mailto:bellabeautyboxireland@gmail.com">bellabeautyboxireland@gmail.com</a></p>
-   <p><strong>Phone:</strong> <a href="tel:+353876218865">087 621 8865</a></p>
- </div>
-  </section>
-    
-<footer class="footer">
-   <div class="footer-content">
-     <p>© 2025 Bella Beauty Box. All rights reserved.</p>
-     
-     <div class="social-links">
-      <a href="#"><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-        </a>
-
-      <a href="#"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram">
-         </a>
-
-      <a href="#"><i class="fab fa-tiktok"></i><a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok">
-         </a>
-
-     </div>
-   </div>
 
