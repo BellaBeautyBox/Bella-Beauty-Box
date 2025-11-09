@@ -177,19 +177,12 @@ nav a:hover {
 /* === PACKAGE & FORM CARD REFINEMENT === */
 .package-card {
   text-align: center;
-  border-radius: 22px;
-  background: white;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid transparent;
-  background-image: linear-gradient(white, white),
-    linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  margin: 25px auto;
-  padding: 25px;
-  max-width: 700px;
-  transition: all 0.3s ease;
-}
+  border-radius: 30px; 
+  background: linear-gradient(white, white) 
+  padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) 
+  border-box; border: 3px solid transparent; 
+  padding: 12px 18px; margin: 12px 0; text-align: center; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);}
 
 @media (min-width: 1025px) {
   .package-card {
