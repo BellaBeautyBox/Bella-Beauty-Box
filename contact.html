@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Bella Beauty Box</title>
+  <meta name="description" content="Get in touch with Bella Beauty Box — contact us for bookings, packages, and pamper party information." />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <h1>Bella Beauty Box</h1>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="consent.html">Consent</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <h2>We’d love to hear from you 💌</h2>
+    <p>Whether you’re planning a pamper party, karaoke night, or have a question about packages — send us a message below!</p>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="form-section">
+    <div class="package-card">
+      <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Contact Message!">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Thank you for getting in touch! We’ll reply as soon as possible. Love, Bella Beauty Box 💕">
+        <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you-contact.html">
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="How can we help?"></textarea>
+
+        <button class="submit" type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:bellabeautyboxireland@gmail.com">bellabeautyboxireland@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+353876218865">087 621 8865</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bella Beauty Box. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenu.innerHTML = navMenu.classList.contains('active')
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>
