@@ -4,145 +4,257 @@
   <meta charset="utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bella Beauty Box</title>
- <meta name="description" content="Mobile karaoke and pamper parties for kids, teens & adults — glam makeovers, karaoke, photo props & more." />
-
-<!-- Google Font -->
-<linkhref="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
-  <style> :root{ --pink:#ff5eb8; --purple:#c67aff; --mint:#96f7d2; --yellow:#ffe88a; --blue:#9ee6ff; --deep:#5a2070; --card:#fff9fe; --shadow:0 6px 20px rgba(90,32,112,0.15); font-family: 'Quicksand', sans-serif;}
+  <title>Bella Beauty Box</title>
+  <meta name="description" content="Mobile karaoke and pamper parties for kids, teens & adults — glam makeovers, karaoke, photo props & more." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+  <style> :root{ --pink:#ff5eb8; --purple:#c67aff; --mint:#96f7d2; --yellow:#ffe88a; --blue:#9ee6ff; --deep:#5a2070; --card:#fff9fe; --shadow:0 6px 20px rgba(90,32,112,0.15); font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
    
-* { box-sizing: border-box; margin: 0; padding: 0; }  
- body {background: linear-gradient(180deg, #fff7fb, #fff); color: #3b2a3b; overflow-x:    hidden; scroll-behavior: smooth;}    
-
-form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);} button.submit, button.submit-btn { background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; border: none; border-radius: 10px; padding: 12px 24px; cursor: pointer; font-weight: bold; box-shadow: var(--shadow); transition: all 0.3s ease;} button.submit:hover, button.submit-btn:hover {transform: scale(1.05); opacity: 0.9;}
- .book-btn {display: inline-block; margin: 15px 0; padding: 10px 20px; background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; text-decoration: none; border-radius: 25px; font-weight: bold;
-
-.price-list {display: flex;  flex-direction: column; gap: 10px; margin: 20px auto; max-width: 400px;}
-
-.price-item { display: flex; justify-content: space-between; background: white;
-  padding: 10px 15px; border-radius: 12px;
-  border: 1px solid #f1c6f1; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  font-size: 1.1rem; font-weight: 500;
-
- .faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);}
-
+    { box-sizing: border-box; }
+  
+    body{margin:10;background:linear-gradient(180deg,#ffe6fa,#fff);color:#3b2a3b;overflow-x:hidden;scroll-behavior:smooth}
     
-  /* === HEADER === */
-    header {display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap;  background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);
- color: white; padding: 20px 30px; position: sticky; top: 0; z-index: 1000; transition: all   0.4s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+    .brand{display:flex;align-items:center;gap:12px}
+    
+    /* === HEADER STYLES CLEANED AND FIXED === */
+  header {display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); color: white; padding: 20px 30px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; transition: all 0.4s ease;}
+  header.shrink {padding: 10px 20px; background: linear-gradient(90deg, #ff4fab, #9575fa, #6ee8f5);}
 
-header.shrink {padding: 10px 20px; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); } (colour)
-
-    .brand h1 {font-size: 2rem; font-weight: 700; color: white;margin: 0; }
-    header.shrink .brand h1 {font-size: 1.6rem; }
+    /* === BRAND === */
+.brand h1 {font-size: 2.2rem; margin: 0; line-height: 1.2; color: white;}
+ header.shrink 
+.brand h1 {font-size: 1.8rem;}
 
     /* === NAVIGATION === */
-    nav {display: flex; align-items: center; gap: 18px; }
+nav {display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;}
+nav a {color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; transition: opacity 0.3s, transform 0.3s;}
+nav a:hover {opacity: 0.85; transform: scale(1.05);}
 
-    nav a { color: white; text-decoration: none; font-size: 1.2rem; transition: opacity 0.3s, transform 0.3s; }
+social-icons a {color: white; font-size: 1.4rem; margin-left: 10px; transition: color 0.3s;}
+social-icons a:hover {color: var(--yellow);}
 
-    nav a:hover {opacity: 0.85; transform: scale(1.05);}
+/* === TABLET VIEW === */
+@media (max-width: 1024px) {header {flex-direction: column; text-align: center; padding: 16px 20px; }
+.brand h1 {font-size: 2rem;}
+nav {justify-content: center; flex-wrap: wrap; margin-top: 10px;}
+nav a {font-size: 1.2rem; margin: 6px 10px;}}
 
-/* SOCIAL ICONS */
-    .social-icons {display: flex; align-items: center; gap: 14px; }
-    .social-icons a {color: white; font-size: 1.3rem; transition: color 0.3s ease; }
-    .social-icons a:hover {color: #fffde7; }
+/* === MOBILE VIEW === */
+/* === HAMBURGER MENU === */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+.menu-toggle:hover { transform: scale(1.1); }
 
-    /* HAMBURGER */
-    .menu-toggle {display: none; font-size: 2rem; color: white; cursor: pointer; user-select: none;}
+@media (max-width: 768px) {
+  .menu-toggle { display: block; position: absolute; right: 25px; top: 25px; }
+  nav { display: none; flex-direction: column; width: 100%; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2); padding: 15px 0; text-align: center; }
+  nav.active { display: flex; }
+  nav a { display: block; margin: 10px 0; font-size: 1.2rem; }
+  .social-icons { display: flex; justify-content: center; gap: 15px; margin-top: 10px; }
+  .social-icons a { font-size: 1.5rem; color: white; }
+}
+
+
+
+/* === SMALL MOBILE VIEW === */
+@media (max-width: 480px) {
+brand h1 {font-size: 1.6rem;}
+nav a {font-size: 1rem;}}
+
+    /* === MOBILE FIXES FOR MENU + SOCIAL ICONS === */
+@media (max-width: 768px) {header { flex-direction: column; align-items: center;}
+  .menu-toggle {align-self: flex-end; margin-right: 20px;}
+  .nav {order: 3; text-align: center; }
+  .social-icons {order: 4; display: flex; justify-content: center; width: 100%; margin-top: 10px; gap: 15px;}
+  .social-icons a {font-size: 1.5rem;}}
+  .menu-toggle {position: absolute; right: 20px; top: 22px;}
+
+
+    nav a{margin-left:16px;color:white;text-decoration:none;font-size: 1.3rem; font-weight:200;transition:opacity 0.3s}
+    nav a:hover{opacity:0.8}
+
+    .social-icons a{color:white;margin-left:16px;font-size:20px;transition:color 0.3s ease;}
+    .social-icons a:hover{color:var(--yellow);}
+
+    section{scroll-margin-top:100px}
+   
+    .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;width:100%;gap:10px;padding:10px;background:white;}
+    .carousel img{flex:0 0 auto;width:80%;max-width:600px;height:350px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow);scroll-snap-align:center;}
+                                                                                         
+     .form-card {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; max-width: 400px; width: 100%; background: white;border-radius: 10px;box-shadow: 0 4px 5px rgba(0,0,0,0.1); border: 0.4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;padding: 2rem;}}
+    
+     .page-title {text-align: center; font-size: 2rem; font-weight: 700; margin-top: 40px; margin-bottom: 25px; background: linear-gradient(90deg, #ff5eb8, #c67aff, #96f7d2);-webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px;}
+                               
+    .package-cards {grid-template-columns: 1fr;}section, .content, .form {padding: 1rem; text-align: center;} h1, h2, h3, p {font-size: 1rem;}
+    .package-card{text-align: center; border-radius:20px; background: white; box-shadow: 0 2px 3px rgba(0,0,0,0.1); border: 4px solid transparent; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);background-origin: border-box; background-clip: content-box, border-box;}
+    .package-card.alt{background-image: linear-gradient(white,white), linear-gradient(90deg, var(--blue), var(--mint), var(--purple), var(--pink), var(--yellow))}
+    .package-card.gold{background-image: linear-gradient(white,white), linear-gradient(90deg, rgba(255,215,0,0.95), rgba(255,235,160,0.9));box-shadow: 0 8px 30px rgba(255,215,0,0.12);}
+    .package-card h3{text-align: center; margin-top:40;color:var(--deep)}
+    .package-card p{color:#5b3d5b}
+
+    .book-btn {display: inline-block; margin: 15px 0; padding: 10px 20px; background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; text-decoration: none; border-radius: 25px; font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, opacity 0.3s ease;}
+
+.book-btn:hover {transform: scale(1.05);opacity: 0.9;}form {display: flex;flex-direction: column; gap: 1rem; align-items: center; text-align: left;} form label {font-weight: 600; color: var(--deep); width: 100%; text-align: left;}
+form input, form select, form textarea { width: 100%; padding: 5px; border: 1px solid transparent; border-radius: 15px; background-image: linear-gradient(white, white), linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff); background-origin: border-box; background-clip: content-box, border-box; box-shadow: 0 1.5px 3px rgba(0,0,0,0.1); font-size: 16px; color: #333;}
+form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);}
+
+   .faq-pill {border-radius: 30px; background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) border-box; border: 3px solid transparent; padding: 12px 18px; margin: 12px 0; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);}
+
+
+form {display: flex; flex-direction: column; gap: 1rem; align-items: center; text-align: centre;}
+form label {font-weight: 600; color: var(--deep); width: 100%; text-align: centre;}
+form input, form select, form textarea {width: 100%; padding: 10px; border: 1px solid #333; border-radius: 10px; background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-size: 16px; color: #333;}
+form input:focus, form select:focus, form textarea:focus {outline: none; box-shadow: 0 0 5px var(--pink);} button.submit, button.submit-btn { background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint)); color: white; border: none; border-radius: 10px; padding: 12px 24px; cursor: pointer; font-weight: bold; box-shadow: var(--shadow); transition: all 0.3s ease;} button.submit:hover, button.submit-btn:hover {transform: scale(1.05); opacity: 0.9;}
  
-  /* MOBILE MENU */
-    @media (max-width: 1024px) {
-      header { flex-wrap: nowrap; justify-content: space-between; }
+    .package-card form {max-width: 500px; margin: 0 auto;}
+    .contact-info{margin-top:25px;text-align:center;font-size:18px;color:var(--deep);}
+    .contact-info a{color:var(--purple);font-weight:600;text-decoration:none;transition:color 0.3s;}
+    .contact-info a:hover{color:var(--pink);}
 
-   .brand { flex: 1; }
-   .menu-toggle {display: block; text-align: center; }
+.thank-you-card {background-color: #fff; border: 3px solid; border-image: linear-gradient(90deg, #ffb6c1, #ffd1dc, #b5e7a0, #b3e5fc, #fbcffc) 1; border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 500px;
+} h1 {font-size: 2em; color: #ff69b4; margin-bottom: 10px;
+} p {font-size: 1.1em; line-height: 1.5;}
 
-  #nav-menu { display: none;  flex-direction: column; align-items: center;
-   width: 100%; background: linear-gradient(90deg, var(--pink), var(--purple), var(--mint));
-    border-top: 1px solid rgba(255, 255, 255, 0.3); padding: 10px 0;}
+.home-button {margin-top: 25px; background-color: #ff69b4; color: white; border: none; padding: 10px 20px; border-radius: 25px; font-size: 2em; cursor: pointer; transition: background 0.3s ease;}
 
-    #nav-menu.active {display: flex; }
-    nav a {margin: 8px 0; font-size: 1.1rem;}
+.home-button:hover {background-color: #ff85c1;} footer {margin-top: 40px; font-size: 0.9em; color: #777;} body {animation: fadeIn 0.7s ease-in-out;}
 
-    .social-icons {flex: 1; justify-content: flex-end;  }
-    }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
+   
+    footer{padding:20px 28px;text-align:center;background:linear-gradient(90deg,var(--mint),var(--pink),var(--purple));color:white;margin-top:20px}
+ /* === HERO SECTION TEXT === */
+.hero h2 {
+  font-size: 2rem;           /* increase or decrease as needed */
+  font-weight: 600;
+  color: var(--deep);
+  text-align: center;
+  margin-top: 10px;
+}
 
-    @media (max-width: 480px) {
-   .brand h1 { font-size: 1.5rem; } nav a { font-size: 1rem; }
-   .social-icons a { font-size: 1.2rem; }
-    }
+@media (max-width: 768px) {
+  .hero h2 {font-size: 1.6rem;       /* keeps it balanced on mobile */}
+}
+/* === FORM FIX FOR MOBILE === */
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
-  /* === HERO SECTION === */
-    section.hero { text-align: center; padding: 60px 20px; }
+form label {
+  font-weight: 600;
+  color: var(--deep);
+  margin-bottom: 6px;
+  display: block;
+  text-align: left;
+}
 
-    .hero h1 { font-size: 2.5rem; color: var(--deep); }
+form input,
+form select,
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background: white;
+}
 
-    .hero h2 { font-size: 1.8rem; color: var(--purple); margin: 10px 0 20px; }
-   .hero p {max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;
-   color: #4c3a4c; }
+@media (max-width: 768px) {
+  form {
+    padding: 0.5rem 1rem;
+  }
 
-   /* === CAROUSEL === */
-    .carousel {display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
-     scroll-behavior: smooth; width: 100%; gap: 10px; padding: 10px;
-      margin-top: 30px; background: white; border-radius: 10px;}
+  form input,
+  form select,
+  form textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
 
-    .carousel img { flex: 0 0 auto; width: 80%; max-width: 600px;
-      height: 350px;  object-fit: cover; border-radius: 20px; box-shadow: var(--shadow);
-      scroll-snap-align: center;}
+    /* === PRICE LIST IMPROVEMENT === */
+.price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+}
 
-    @media (max-width: 768px) {  .carousel img { width: 100%; height: auto; }  }
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid #f1c6f1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--deep);
+}
 
-   /* === PACKAGE CARDS === */
-    .package-card {text-align: center; border-radius: 20px; background: white;
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); border: 3px solid transparent;
-      background-image: linear-gradient(white, white),
-        linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
-      background-origin: border-box; background-clip: content-box, border-box;
-      margin: 20px auto; padding: 20px; max-width: 600px;}
+@media (max-width: 768px) {
+  .price-item {font-size: 1rem; flex-direction: row; justify-content: space-between;}
+}
 
-    @media (max-width: 768px) { .package-card { border-width: 2px; padding: 15px;}}
-
-footer { text-align: center; background: linear-gradient(90deg, var(--mint), var(--pink), var(--purple)); color: white; padding: 20px; margin-top: 40px; }
-
-  </style>
+    
+</style>
+  
 </head>
+  
+  <script>window.addEventListener('scroll', function() {const header = document.querySelector('header');if (window.scrollY > 50) {header.classList.add('shrink');
+  } else {header.classList.remove('shrink');}});
+  </script>
+
 <body>
   <header>
-    <div class="brand">
-      <h1>Bella Beauty Box</h1>
-    </div>
-
-    <div class="menu-toggle" id="mobile-menu">
+  <div class="brand">
+    <h1>Bella Beauty Box</h1>
   </div>
-      <i class="fas fa-bars"></i>
-    </div>
-<nav id="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="booking.html">Booking</a>
-      <a href="consent.html">Consent</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
 
-    <div class="social-icons">
-    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-  f"></i></a>
+  <!-- HAMBURGER ICON -->
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
 
-    <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank"><i class="fab fa-instagram"></i></a>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Booking</a>
+    <a href="consent.html">Consent</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-       <a href="https://www.tiktok.com/@bellabeautyboxireland" aria-label="TikTok">
-         <i class="fab fa-tiktok"></i>
-       </a>
-    </div>
-  </header>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/bellabeautyboxireland" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</header>
 
-  <section class="hero">
-    <h1>Bring The Perfect Party To You</h1>
-    <h2>Glam makeovers, karaoke & endless fun!</h2>      <p class="lead">Pamper and karaoke parties for kids, teens and grown-ups. Choose a package full of glitter, laughter, and photo-ready props. We bring the glam van to you — perfect for birthdays, hens, and celebrations!</p>
+
+
+  <section id="home" class="hero">
+    <div class="hero-left">
+       <h1>Bring The Perfect Party To You</h1>
+      <h2>Glam makeovers, karaoke & endless fun!</h2>
+      <p class="lead">Pamper and karaoke parties for kids, teens and grown-ups. Choose a package full of glitter, laughter, and photo-ready props. We bring the glam van to you — perfect for birthdays, hens, and celebrations!</p>
       <div class="cta-row">
     <div class="carousel">
 <img src="Images/party1.svg" alt="logo" />
@@ -156,34 +268,36 @@ footer { text-align: center; background: linear-gradient(90deg, var(--mint), var
 </div>
   </section>
     <div class="package-card">
-    <h3>Princess Pop Package — €28 per guest</h3>
-    <p>Bella Beauty Box introduces the ‘Princess Pop Package’. The perfect package for little Princesses ready to party and sparkle. Indulge in treatments, sing to your heart’s content.</p>
-     <h4>Package includes:</h4>
-      <p>Choice of services (2 For Main Guest & 1 For Everyone Else)</p>
+                                                                  <h3>Princess Pop Package — €28 per guest</h3>
+           <p>Bella Beauty Box introduces the ‘Princess Pop Package’. The perfect package for little Princesses ready to party and sparkle. Indulge in treatments, sing to your heart’s content.</p>
+                                                                         <h4>Package includes:</h4>
+                                                    <p>Choice of services (2 For Main Guest & 1 For Everyone Else)</p>
                                                                                   <ul>
-        <p>Nail Painting</p>
-        <p>Fun Hair</p>
-        <p>Face Gems</p>
-          <p>Temporary Tattoo</p>
-                </ul>
-        <h4>For the duration of the event:</h4>
-                       <ul>
-         <p>Robes + headbands for all guests</p>
-                   <p>Karaoke section</p>
-                      <p>Creativity section</p>
-                      <p>Photo Props such as hats, wigs and more</p>
-                      <p>90 Minutes Party Time</p>
-                        </ul>
-                <h4>Optional:</h4>
-                          <ul>
+                                                                         <p>Nail Painting</p>
+                                                                           <p>Fun Hair</p>
+                                                                          <p>Face Gems</p>
+                                                                      <p>Temporary Tattoo</p>
+                                                                                 </ul>
+                                                                 <h4>For the duration of the event:</h4>
+                                                                                  <ul>
+                                                                <p>Robes + headbands for all guests</p>
+                                                                        <p>Karaoke section</p>
+                                                                       <p>Creativity section</p>
+                                                             <p>Photo Props such as hats, wigs and more</p>
+                                                                      <p>90 Minutes Party Time</p>
+                                                                                 </ul>
+                                                                           <h4>Optional:</h4>
+                                                                                 <ul>
                             <p>‘Bella Beauty Box’ For Main Guest (Examples include: Eye Mask, Face Gems, Hair Braid, Keyring, Tattoos and more, €30 extra)</p>
-                       <p>Juices & Sweets For Entire Party (€3 Per Guest)</p>
-                   <p>Downloadable party invites available on request</p>
+                                                      <p>Juices & Sweets For Entire Party (€3 Per Guest)</p>
+                                                      <p>Downloadable party invites available on request</p>
 
-                          </ul>
+                                                                                </ul>
       <a href="#booking" class="book-btn">Book Now</a>
     </div>
 </section>
+        
+
     <div class="package-card">
       <h3>VIPrincess Package — €35 per guest</h3>
        <p>Bella Beauty Box introduces the ultimate ‘VIPrincess Package’. This is where the Princess scene meets the ultimate party scene, designed for those who crave a unique experience with all that sparkles and shines.</p>
@@ -250,6 +364,7 @@ footer { text-align: center; background: linear-gradient(90deg, var(--mint), var
     </div>
 
      </section>   
+
     <div class="package-card">
       <h3>Custom Package — Price on Request</h3>
        <h4>Let’s create your own custom pamper or karaoke party! Choose your services, themes, and extras for an unforgettable event tailored just for you.</h4>
@@ -289,7 +404,7 @@ footer { text-align: center; background: linear-gradient(90deg, var(--mint), var
               </form>
     </div>
   </section>
-
+        
   <section id="booking">
    <div class="package-card">
       <form action="https://formsubmit.co/bellabeautyboxireland@gmail.com" method="POST">
@@ -388,25 +503,25 @@ footer { text-align: center; background: linear-gradient(90deg, var(--mint), var
     
 
     <div class="faq-grid">
-      <div class="faq-pill"><div class="faq-q">Do I need to pay a deposit?<br><medium style="font-weight:500;">Yes — 25% is required to secure bookings.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">Do I need to pay a deposit?<br><small style="font-weight:400;">Yes — 25% is required to secure bookings.</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">What is your cancellation policy?<br><medium style="font-weight:500;">Deposit is non-refundable but can be used for a future party.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">What is your cancellation policy?<br><small style="font-weight:400;">Deposit is non-refundable but can be used for a future party.</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">What ages are the parties suitable for?<br><medium style="font-weight:500;">Ages 5+, teens, and adults.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">What ages are the parties suitable for?<br><small style="font-weight:400;">Ages 5+, teens, and adults.</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">How many guests can I invite?<br><medium style="font-weight:500;">We cater for 4–12 guests (contact us for larger groups).</small></div></div>
+      <div class="faq-pill"><div class="faq-q">How many guests can I invite?<br><small style="font-weight:400;">We cater for 4–12 guests (contact us for larger groups).</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">Do you travel outside Limerick?<br><medium style="font-weight:500;">Yes — Limerick, Clare, Tipperary & surrounds (travel fee may apply).</small></div></div>
+      <div class="faq-pill"><div class="faq-q">Do you travel outside Limerick?<br><small style="font-weight:400;">Yes — Limerick, Clare, Tipperary & surrounds (travel fee may apply).</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">Are the products safe for children?<br><medium style="font-weight:500;">Yes — child-friendly products; list allergies on the consent form.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">Are the products safe for children?<br><small style="font-weight:400;">Yes — child-friendly products; list allergies on the consent form.</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">How far in advance should I book?<br><medium style="font-weight:500;">We recommend 3–4 weeks in advance.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">How far in advance should I book?<br><small style="font-weight:400;">We recommend 3–4 weeks in advance.</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">Is there anything I need to provide?<br><medium style="font-weight:500;">An open, flat space to park and access to an electrical socket.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">Is there anything I need to provide?<br><small style="font-weight:400;">An open, flat space to park and access to an electrical socket.</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">Will you take videos and photos?<br><medium style="font-weight:500;">Yes — with consent; they’ll be sent to the person who booked.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">Will you take videos and photos?<br><small style="font-weight:400;">Yes — with consent; they’ll be sent to the person who booked.</small></div></div>
 
-      <div class="faq-pill"><div class="faq-q">What happens during bad weather?<br><medium style="font-weight:500;">We’re enclosed and can operate in most weather; severe weather may require reschedule.</small></div></div>
+      <div class="faq-pill"><div class="faq-q">What happens during bad weather?<br><small style="font-weight:400;">We’re enclosed and can operate in most weather; severe weather may require reschedule.</small></div></div>
     </div>
    </section>
         
@@ -420,7 +535,8 @@ footer { text-align: center; background: linear-gradient(90deg, var(--mint), var
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_autoresponse" value="Thank you for getting in touch. We’ll reply as soon as possible!Love Bella Beauty Box">
               <input type="hidden" name="_next" value="https://bellabeautybox.ie/thank-you-contact.html">
-<h2 class="page-title">Contact Us</h2>
+                
+  <h2 class="page-title">Contact Us</h2>
       <label for="name">Name</label>
       <input id="name" name="name" type="text" required>
       <label for="email">Email</label>
@@ -437,34 +553,33 @@ footer { text-align: center; background: linear-gradient(90deg, var(--mint), var
    <p><strong>Phone:</strong> <a href="tel:+353876218865">087 621 8865</a></p>
  </div>
   </section>
-
-
+    
 <footer class="footer">
    <div class="footer-content">
      <p>© 2025 Bella Beauty Box. All rights reserved.</p>
      <div class="social-links">
-       <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-         <i class="fab fa-facebook-f"></i></a>
-   
        <a href="https://www.instagram.com/bellabeautyboxireland" aria-label="Instagram">
-         <i class="fab fa-instagram"></i> </a>
-
+         <i class="fab fa-instagram"></i>
+       </a>
        <a href="https://www.tiktok.com/@bellabeautyboxireland" aria-label="TikTok">
          <i class="fab fa-tiktok"></i>
        </a>
      </div>
    </div>
  </footer>
-
   <script>
-    // Shrink on scroll
-    window.addEventListener('scroll', function() {const header = document.querySelector('header'); if (window.scrollY > 50) {header.classList.add('shrink'); } else { header.classList.remove('shrink');  }
-    });
+  // Shrink header on scroll
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) header.classList.add('shrink');
+    else header.classList.remove('shrink');
+  });
 
-    // Hamburger menu toggle
-    document.getElementById('mobile-menu').addEventListener('click', function() {
-      const nav = document.getElementById('nav-menu'); nav.classList.toggle('active');
-      this.innerHTML = nav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>'; });
-  </script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('mobile-menu');
+  const nav = document.getElementById('navbar');
+  menuToggle.addEventListener('click', () => {nav.classList.toggle('active');});
+</script>
+      
 </body>
 </html>
