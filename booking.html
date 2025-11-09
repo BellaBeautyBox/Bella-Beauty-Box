@@ -77,3 +77,28 @@
       </form>
     </div>
   </section>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bella Beauty Box. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bellabeautyboxireland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bellabeautyboxireland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenu.innerHTML = navMenu.classList.contains('active')
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>
