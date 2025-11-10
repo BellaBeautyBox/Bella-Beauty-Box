@@ -275,6 +275,35 @@ nav a:hover {
   text-align: center;
 }
 
+/* Center and style package text */
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.package-card li {
+  position: relative;
+  padding-left: 20px;
+  margin: 6px 0;
+  display: inline-block; /* keeps them centred and neat */
+  width: 100%;
+  color: #4b1460;
+}
+
+/* Add small pastel star before each item */
+.package-card li::before {
+  content: "★";
+  color: #ffb3ec; /* soft pastel pink star */
+  font-size: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+}
+
+
 
 /* === FORMS === */
 form {
