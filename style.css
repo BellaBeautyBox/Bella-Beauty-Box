@@ -206,6 +206,46 @@ nav a:hover {
   color: var(--deep);
 }
 
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.event-list li {
+  font-size: 1.2rem;
+  color: var(--deep);
+  font-weight: 600;
+  margin: 10px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+.event-list li::before,
+.event-list li::after {
+  content: "✨";
+  margin: 0 6px;
+  font-size: 1.2rem;
+  animation: pastelGlow 4s infinite alternate;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+@keyframes pastelGlow {
+  0% { color: #ffb6e6; }   /* pink */
+  33% { color: #c5a3ff; }  /* lilac */
+  66% { color: #9ef7d5; }  /* mint */
+  100% { color: #ffe88a; } /* soft yellow */
+}
+
 /* Desktop fine-tune */
 @media (min-width: 1025px) {
   .package-card {
