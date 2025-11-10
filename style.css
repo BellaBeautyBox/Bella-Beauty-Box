@@ -176,7 +176,7 @@ nav a:hover {
 
 /* === PACKAGE & FORM CARD REFINEMENT === */
 .package-card {
-  text-align: center;
+  text-align:center;
   border-radius: 30px; 
   background: linear-gradient(white, white) 
   padding-box, linear-gradient(90deg, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff) 
@@ -193,7 +193,7 @@ nav a:hover {
 }
 
 .package-card p {
-  text-align: center;
+  text-align:center;
   margin: 10px auto;
   width: 90%;
   color: #5a2070;
@@ -224,6 +224,17 @@ nav a:hover {
     padding: 20px 15px;
   }
 }
+
+/* Center all package cards properly */
+.package-card {
+  margin: 25px auto;            /* ensures horizontal centring */
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* centres content inside */
+  justify-content: center;      /* vertically neat too */
+  text-align: center;
+}
+
 
 /* === FORMS === */
 form {
@@ -443,5 +454,12 @@ footer .social-icons {
 
   .about p {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .package-card {
+    max-width: 600px;
+    margin: 30px auto;  /* keeps them centred on large screens */
   }
 }
