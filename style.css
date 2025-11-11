@@ -298,7 +298,18 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
   animation: starShift 4s linear infinite;
 }
-
+/* Animate the gradient shimmer of the stars */
+@keyframes starShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
 /* === FORMS === */
