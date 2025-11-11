@@ -226,13 +226,6 @@ nav a:hover {
   animation: twinkle 3s infinite ease-in-out;
 }
 
-.event-list li::before,
-.event-list li::after {
-  content: "✨";
-  margin: 0 6px;
-  font-size: 1.2rem;
-  animation: pastelGlow 4s infinite alternate;
-}
 
 @keyframes twinkle {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -275,7 +268,7 @@ nav a:hover {
   text-align: center;
 }
 
-/* Center and style package text */
+/* Center and prettify the lists */
 .package-card ul {
   list-style: none;
   padding: 0;
@@ -283,24 +276,27 @@ nav a:hover {
   text-align: center;
 }
 
+/* Text and stars styling */
 .package-card li {
   position: relative;
-  padding-left: 20px;
-  margin: 6px 0;
-  display: inline-block; /* keeps them centred and neat */
+  display: inline-block;
   width: 100%;
+  margin: 6px 0;
+  font-weight: 500;
   color: #4b1460;
+  font-size: 1.05rem;
 }
 
-/* Add small pastel star before each item */
-.package-card li::before {
+/* ✨ Add animated pastel stars before and after each item */
+.package-card li::before,
+.package-card li::after {
   content: "★";
-  color: #ffb3ec; /* soft pastel pink star */
   font-size: 0.9rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(0);
+  margin: 0 8px;
+  background: linear-gradient(90deg, #ffb3ec, #ffd6a5, #b5e7a0, #bae1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: starShift 4s linear infinite;
 }
 
 
