@@ -287,28 +287,23 @@ nav a:hover {
   font-size: 1.05rem;
 }
 
-/* ✨ Add animated pastel stars before and after each item */
+/* === MAGICAL STARS (match header/footer gradient animation) === */
 .package-card li::before,
 .package-card li::after {
   content: "★";
   font-size: 0.9rem;
   margin: 0 8px;
-  background: linear-gradient(90deg, #ffb3ec, #ffd6a5, #b5e7a0, #bae1ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: starShift 4s linear infinite;
+  color: #ff5eb8; /* starting colour */
+  animation: colorShift 4s ease-in-out infinite;
 }
-/* Animate the gradient shimmer of the stars */
-@keyframes starShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+
+/* smooth pastel rotation through Bella Beauty colours */
+@keyframes colorShift {
+  0% { color: #ff5eb8; }   /* pink */
+  25% { color: #c67aff; }  /* purple */
+  50% { color: #96f7d2; }  /* mint */
+  75% { color: #ffe88a; }  /* yellow */
+  100% { color: #ff5eb8; } /* back to pink */
 }
 
 
